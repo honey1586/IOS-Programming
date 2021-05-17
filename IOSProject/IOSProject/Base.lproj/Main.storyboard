@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ex-2H-22i">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="HxC-Jd-4Q9">
+            <objects>
+                <viewController id="CAt-by-KER" customClass="ViewController" customModule="teamproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aCT-Zf-gt7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0U-RH-ngz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aN-sI-SuH">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="834"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 정보 검색 어플" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9p-IL-Fi5">
+                                                <rect key="frame" x="20" y="20" width="374" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gza-Qh-OuN" userLabel="Search View">
+                                                <rect key="frame" x="20" y="40" width="374" height="548"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdW-hI-AsZ" userLabel="Do Picker View">
+                                                        <rect key="frame" x="20" y="20" width="334" height="216"/>
+                                                    </pickerView>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCr-yS-fQ6" userLabel="Si Picker View">
+                                                        <rect key="frame" x="20" y="256" width="334" height="216"/>
+                                                    </pickerView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4W-cp-3Rd" userLabel="Search Button">
+                                                        <rect key="frame" x="141" y="492" width="92" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="관광지 검색"/>
+                                                        <connections>
+                                                            <segue destination="4C2-xP-lhe" kind="show" id="ijL-aJ-NXV"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="iCr-yS-fQ6" firstAttribute="leading" secondItem="Gza-Qh-OuN" secondAttribute="leading" constant="20" id="9cz-tY-TsH"/>
+                                                    <constraint firstItem="PdW-hI-AsZ" firstAttribute="leading" secondItem="Gza-Qh-OuN" secondAttribute="leading" constant="20" id="Aek-c9-Byc"/>
+                                                    <constraint firstItem="iCr-yS-fQ6" firstAttribute="top" secondItem="PdW-hI-AsZ" secondAttribute="bottom" constant="20" id="Miz-D5-06r"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iCr-yS-fQ6" secondAttribute="trailing" constant="20" id="YIV-pR-2cJ"/>
+                                                    <constraint firstItem="y4W-cp-3Rd" firstAttribute="centerX" secondItem="Gza-Qh-OuN" secondAttribute="centerX" id="Ygb-tH-EZK"/>
+                                                    <constraint firstItem="y4W-cp-3Rd" firstAttribute="top" secondItem="iCr-yS-fQ6" secondAttribute="bottom" constant="20" id="ZhE-oA-7QB"/>
+                                                    <constraint firstItem="PdW-hI-AsZ" firstAttribute="top" secondItem="Gza-Qh-OuN" secondAttribute="top" constant="20" id="cv1-6v-yyt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PdW-hI-AsZ" secondAttribute="trailing" constant="20" id="dt6-12-tQr"/>
+                                                    <constraint firstAttribute="bottom" secondItem="y4W-cp-3Rd" secondAttribute="bottom" constant="20" id="kbh-n7-KOQ"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Y-G7-oaJ" userLabel="Close Button">
+                                                <rect key="frame" x="20" y="608" width="374" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="근처 관광지 찾기"/>
+                                                <connections>
+                                                    <segue destination="oeZ-bx-VUw" kind="show" id="NVL-Xf-TQ4"/>
+                                                </connections>
+                                            </button>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-Tq-dDd" userLabel="Recomment Scroll View">
+                                                <rect key="frame" x="20" y="664" width="374" height="150"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l5Q-Yx-hJH">
+                                                        <rect key="frame" x="42" y="0.0" width="240" height="150"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="8Vy-5X-DLT"/>
+                                                    <constraint firstItem="l5Q-Yx-hJH" firstAttribute="height" secondItem="Bok-wd-bCG" secondAttribute="height" id="QAw-Sy-9cH"/>
+                                                    <constraint firstItem="l5Q-Yx-hJH" firstAttribute="top" secondItem="rx0-xv-1uz" secondAttribute="top" id="Wub-je-NtH"/>
+                                                    <constraint firstItem="l5Q-Yx-hJH" firstAttribute="trailing" secondItem="rx0-xv-1uz" secondAttribute="trailing" id="l2K-8f-T88"/>
+                                                    <constraint firstItem="l5Q-Yx-hJH" firstAttribute="bottom" secondItem="rx0-xv-1uz" secondAttribute="bottom" id="nNV-Db-StY"/>
+                                                    <constraint firstItem="l5Q-Yx-hJH" firstAttribute="leading" secondItem="rx0-xv-1uz" secondAttribute="leading" id="vnA-nL-lZR"/>
+                                                </constraints>
+                                                <viewLayoutGuide key="contentLayoutGuide" id="rx0-xv-1uz"/>
+                                                <viewLayoutGuide key="frameLayoutGuide" id="Bok-wd-bCG"/>
+                                            </scrollView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="f3Y-G7-oaJ" firstAttribute="top" secondItem="Gza-Qh-OuN" secondAttribute="bottom" constant="20" id="5wn-uS-dDK"/>
+                                            <constraint firstItem="kDf-Tq-dDd" firstAttribute="leading" secondItem="9aN-sI-SuH" secondAttribute="leading" constant="20" id="AhJ-JC-1ar"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gza-Qh-OuN" secondAttribute="trailing" constant="20" id="Duh-DW-PMB"/>
+                                            <constraint firstItem="kDf-Tq-dDd" firstAttribute="top" secondItem="f3Y-G7-oaJ" secondAttribute="bottom" constant="20" id="IGm-LH-42c"/>
+                                            <constraint firstItem="f3Y-G7-oaJ" firstAttribute="leading" secondItem="9aN-sI-SuH" secondAttribute="leading" constant="20" id="MNk-KZ-OmV"/>
+                                            <constraint firstAttribute="trailing" secondItem="f3Y-G7-oaJ" secondAttribute="trailing" constant="20" id="T5f-Im-yCZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="g9p-IL-Fi5" secondAttribute="trailing" constant="20" id="TNN-PE-QUq"/>
+                                            <constraint firstItem="Gza-Qh-OuN" firstAttribute="top" secondItem="g9p-IL-Fi5" secondAttribute="top" constant="20" id="dQv-ty-A76"/>
+                                            <constraint firstAttribute="trailing" secondItem="kDf-Tq-dDd" secondAttribute="trailing" constant="20" id="hRL-Lb-LEv"/>
+                                            <constraint firstAttribute="bottom" secondItem="kDf-Tq-dDd" secondAttribute="bottom" constant="20" id="ilP-Bt-NDI"/>
+                                            <constraint firstItem="g9p-IL-Fi5" firstAttribute="top" secondItem="9aN-sI-SuH" secondAttribute="top" constant="20" id="lid-bd-TID"/>
+                                            <constraint firstItem="g9p-IL-Fi5" firstAttribute="leading" secondItem="9aN-sI-SuH" secondAttribute="leading" constant="20" id="m2e-RI-mDn"/>
+                                            <constraint firstItem="Gza-Qh-OuN" firstAttribute="leading" secondItem="9aN-sI-SuH" secondAttribute="leading" constant="20" id="ob0-hr-Sh7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9aN-sI-SuH" firstAttribute="leading" secondItem="gGA-hM-iSW" secondAttribute="leading" id="NP5-Vu-agQ"/>
+                                    <constraint firstItem="9aN-sI-SuH" firstAttribute="width" secondItem="8jG-Lc-CyI" secondAttribute="width" id="OD7-Z2-860"/>
+                                    <constraint firstItem="9aN-sI-SuH" firstAttribute="bottom" secondItem="gGA-hM-iSW" secondAttribute="bottom" id="chO-sx-9DU"/>
+                                    <constraint firstItem="9aN-sI-SuH" firstAttribute="top" secondItem="gGA-hM-iSW" secondAttribute="top" id="pbP-Nv-JpY"/>
+                                    <constraint firstItem="9aN-sI-SuH" firstAttribute="trailing" secondItem="gGA-hM-iSW" secondAttribute="trailing" id="vtb-9V-tEM"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="gGA-hM-iSW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="8jG-Lc-CyI"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oyN-cN-OaO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H0U-RH-ngz" firstAttribute="bottom" secondItem="aCT-Zf-gt7" secondAttribute="bottom" id="18z-ad-OWT"/>
+                            <constraint firstItem="H0U-RH-ngz" firstAttribute="top" secondItem="oyN-cN-OaO" secondAttribute="top" id="BnL-Pj-Vo6"/>
+                            <constraint firstItem="H0U-RH-ngz" firstAttribute="trailing" secondItem="oyN-cN-OaO" secondAttribute="trailing" id="rmb-t9-AgB"/>
+                            <constraint firstItem="H0U-RH-ngz" firstAttribute="leading" secondItem="oyN-cN-OaO" secondAttribute="leading" id="ylb-F0-FGY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xlc-XC-b50"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfE-kc-XzV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.82608695652175" y="118.52678571428571"/>
+        </scene>
+        <!--관광지 검색-->
+        <scene sceneID="Jds-Wp-h6A">
+            <objects>
+                <tableViewController id="4C2-xP-lhe" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7fc-Xy-Jaa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="K9u-T0-xUp">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9u-T0-xUp" id="qBh-Qu-gcK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="icu-vh-IxJ" kind="show" id="YIH-nb-NGx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4C2-xP-lhe" id="E61-sj-Wba"/>
+                            <outlet property="delegate" destination="4C2-xP-lhe" id="zxb-NA-18R"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="관광지 검색" id="omz-rv-hae"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKw-Yl-05J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1567" y="118"/>
+        </scene>
+        <!--관광지 정보-->
+        <scene sceneID="8MA-dj-8AS">
+            <objects>
+                <viewController id="icu-vh-IxJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Os-X5-I9F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ka-3z-3mM">
+                                <rect key="frame" x="162" y="320" width="92" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="관광지 날씨"/>
+                                <connections>
+                                    <segue destination="FzZ-80-Toa" kind="show" id="Nig-GM-q3M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kY-Vt-WqY">
+                                <rect key="frame" x="143" y="256" width="131" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="관광지 위치 보기"/>
+                                <connections>
+                                    <segue destination="R4h-qL-rud" kind="show" id="iy7-8a-Iip"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ure-e6-w1y">
+                                <rect key="frame" x="123" y="364" width="166" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="근처 버스정류장 검색"/>
+                                <connections>
+                                    <segue destination="oWQ-9Z-Onq" kind="show" id="xDg-aY-o7u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al4-u8-PFy">
+                                <rect key="frame" x="143" y="212" width="131" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="관광지 정보 보기"/>
+                                <connections>
+                                    <segue destination="jBd-Ng-x9S" kind="show" id="Umy-7Q-3PQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QM-eX-654">
+                                <rect key="frame" x="132" y="430" width="149" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="근처 숙박시설 검색"/>
+                                <connections>
+                                    <segue destination="Rby-Sk-PIJ" kind="show" id="geG-nu-54J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hHr-aG-kWk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="관광지 정보" id="lAi-cT-JBL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLm-5k-XCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2283" y="118"/>
+        </scene>
+        <!--관광지 위치 보기-->
+        <scene sceneID="hVr-ov-Mri">
+            <objects>
+                <viewController id="R4h-qL-rud" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kBD-JT-aQF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zvv-9E-fTE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6r4-jE-Kgw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6r4-jE-Kgw" firstAttribute="trailing" secondItem="Zvv-9E-fTE" secondAttribute="trailing" id="DDh-VK-QcH"/>
+                            <constraint firstItem="Zvv-9E-fTE" firstAttribute="top" secondItem="6r4-jE-Kgw" secondAttribute="top" id="OCJ-zl-fWl"/>
+                            <constraint firstItem="6r4-jE-Kgw" firstAttribute="bottom" secondItem="Zvv-9E-fTE" secondAttribute="bottom" id="UqT-0D-FkV"/>
+                            <constraint firstItem="Zvv-9E-fTE" firstAttribute="leading" secondItem="6r4-jE-Kgw" secondAttribute="leading" id="uNi-mj-MpV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="관광지 위치 보기" id="K19-Mm-E8V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VxA-kw-M3N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3522" y="501"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ajE-bI-udL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ex-2H-22i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="leQ-Jg-ddy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CAt-by-KER" kind="relationship" relationship="rootViewController" id="ewr-Qh-lbu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mxd-XU-sIF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="118.52678571428571"/>
+        </scene>
+        <!--관광지 날씨-->
+        <scene sceneID="Y1m-8g-415">
+            <objects>
+                <viewController id="FzZ-80-Toa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fw8-Sz-Uwp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kgy-0V-uJV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="관광지 날씨" id="ybR-Sp-xpg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GB8-6x-GSC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904" y="812"/>
+        </scene>
+        <!--근처 숙박시설 검색-->
+        <scene sceneID="Yfd-4J-IcD">
+            <objects>
+                <tableViewController id="Rby-Sk-PIJ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4DE-ja-mrh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Veg-fb-KLa">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Veg-fb-KLa" id="iFM-Nt-V5a">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="rcR-cF-bgM" kind="show" id="83R-ZR-y2o"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rby-Sk-PIJ" id="Zaj-DY-t3X"/>
+                            <outlet property="delegate" destination="Rby-Sk-PIJ" id="9fe-nu-MI0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="근처 숙박시설 검색" id="0Jm-gv-fl9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UTe-nT-1gC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2283" y="1485"/>
+        </scene>
+        <!--숙박시설 정보-->
+        <scene sceneID="1ig-Wz-cwK">
+            <objects>
+                <viewController id="rcR-cF-bgM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nhp-as-0Px">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpj-I5-i4i">
+                                <rect key="frame" x="170" y="500" width="75" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="위치 보기"/>
+                                <connections>
+                                    <segue destination="jdE-ed-Fns" kind="show" id="Jne-9b-YLA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="krn-3C-x9q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="숙박시설 정보" id="uLS-CH-O0I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjZ-R9-VAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2983" y="1485"/>
+        </scene>
+        <!--근처 관광지 찾기-->
+        <scene sceneID="flD-Wk-L4d">
+            <objects>
+                <viewController id="oeZ-bx-VUw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rk5-TM-lCy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0hn-V3-DSZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="근처 관광지 찾기" id="0OI-gM-xqf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuR-hD-9U1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="812"/>
+        </scene>
+        <!--근처 버스정류장 검색-->
+        <scene sceneID="Mua-gS-Gea">
+            <objects>
+                <viewController id="oWQ-9Z-Onq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QMC-En-m4K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wg5-g5-CfF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="근처 버스정류장 검색" id="Wxs-wh-C4p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CO7-nW-IH3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2643" y="812"/>
+        </scene>
+        <!--위치 보기-->
+        <scene sceneID="HTk-73-UgO">
+            <objects>
+                <viewController id="jdE-ed-Fns" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YDO-Vd-lRY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5C1-cm-659">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fnr-ha-Wpm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fnr-ha-Wpm" firstAttribute="bottom" secondItem="5C1-cm-659" secondAttribute="bottom" id="DJs-qP-bWB"/>
+                            <constraint firstItem="5C1-cm-659" firstAttribute="top" secondItem="Fnr-ha-Wpm" secondAttribute="top" id="HTN-qa-Drs"/>
+                            <constraint firstItem="5C1-cm-659" firstAttribute="leading" secondItem="Fnr-ha-Wpm" secondAttribute="leading" id="Ogj-Tp-1vn"/>
+                            <constraint firstItem="Fnr-ha-Wpm" firstAttribute="trailing" secondItem="5C1-cm-659" secondAttribute="trailing" id="zdo-IA-qQi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="위치 보기" id="qcd-kQ-P45"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLp-Pm-5zw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3696" y="1485"/>
+        </scene>
+        <!--관광지 정보 보기-->
+        <scene sceneID="bRm-p7-j80">
+            <objects>
+                <viewController id="jBd-Ng-x9S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2fU-nb-Obv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C3W-Gj-kuj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="관광지 정보 보기" id="as7-XV-wLr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTN-uA-xdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3522" y="-172"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
