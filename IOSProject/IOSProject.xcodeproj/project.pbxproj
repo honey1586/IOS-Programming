@@ -13,6 +13,12 @@
 		044DF75626522D2B0007755D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044DF75426522D2B0007755D /* Main.storyboard */; };
 		044DF75826522D2C0007755D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044DF75726522D2C0007755D /* Assets.xcassets */; };
 		044DF75B26522D2C0007755D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044DF75926522D2C0007755D /* LaunchScreen.storyboard */; };
+		A128EDBF2657AAA700C3B866 /* AreaCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = A128EDBE2657AAA700C3B866 /* AreaCodes.json */; };
+		A13B55D52658FEFA001E5706 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A13B55D42658FEFA001E5706 /* data.json */; };
+		A13B55DC26590BAA001E5706 /* AreaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B55DB26590BAA001E5706 /* AreaModels.swift */; };
+		A13B55DF26594DF1001E5706 /* TourlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B55DE26594DF1001E5706 /* TourlistTableViewController.swift */; };
+		A1BE88D02659C47F00F28B57 /* TourInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE88CF2659C47F00F28B57 /* TourInfosViewController.swift */; };
+		A1BE88D32659CC5300F28B57 /* TourInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE88D22659CC5300F28B57 /* TourInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		044DF75726522D2C0007755D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044DF75A26522D2C0007755D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044DF75C26522D2C0007755D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A128EDBE2657AAA700C3B866 /* AreaCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AreaCodes.json; sourceTree = "<group>"; };
+		A13B55D42658FEFA001E5706 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		A13B55DB26590BAA001E5706 /* AreaModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModels.swift; sourceTree = "<group>"; };
+		A13B55DE26594DF1001E5706 /* TourlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourlistTableViewController.swift; sourceTree = "<group>"; };
+		A1BE88CF2659C47F00F28B57 /* TourInfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInfosViewController.swift; sourceTree = "<group>"; };
+		A1BE88D22659CC5300F28B57 /* TourInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +68,19 @@
 		044DF74D26522D2B0007755D /* IOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				A13B55D42658FEFA001E5706 /* data.json */,
 				044DF74E26522D2B0007755D /* AppDelegate.swift */,
+				A128EDBE2657AAA700C3B866 /* AreaCodes.json */,
 				044DF75026522D2B0007755D /* SceneDelegate.swift */,
-				044DF75226522D2B0007755D /* ViewController.swift */,
 				044DF75426522D2B0007755D /* Main.storyboard */,
 				044DF75726522D2C0007755D /* Assets.xcassets */,
 				044DF75926522D2C0007755D /* LaunchScreen.storyboard */,
 				044DF75C26522D2C0007755D /* Info.plist */,
+				A13B55DB26590BAA001E5706 /* AreaModels.swift */,
+				044DF75226522D2B0007755D /* ViewController.swift */,
+				A13B55DE26594DF1001E5706 /* TourlistTableViewController.swift */,
+				A1BE88CF2659C47F00F28B57 /* TourInfosViewController.swift */,
+				A1BE88D22659CC5300F28B57 /* TourInformationViewController.swift */,
 			);
 			path = IOSProject;
 			sourceTree = "<group>";
@@ -125,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				044DF75B26522D2C0007755D /* LaunchScreen.storyboard in Resources */,
+				A128EDBF2657AAA700C3B866 /* AreaCodes.json in Resources */,
 				044DF75826522D2C0007755D /* Assets.xcassets in Resources */,
+				A13B55D52658FEFA001E5706 /* data.json in Resources */,
 				044DF75626522D2B0007755D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13B55DC26590BAA001E5706 /* AreaModels.swift in Sources */,
 				044DF75326522D2B0007755D /* ViewController.swift in Sources */,
+				A1BE88D02659C47F00F28B57 /* TourInfosViewController.swift in Sources */,
 				044DF74F26522D2B0007755D /* AppDelegate.swift in Sources */,
+				A13B55DF26594DF1001E5706 /* TourlistTableViewController.swift in Sources */,
+				A1BE88D32659CC5300F28B57 /* TourInformationViewController.swift in Sources */,
 				044DF75126522D2B0007755D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

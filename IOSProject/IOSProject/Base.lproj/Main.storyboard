@@ -11,120 +11,45 @@
         <!--View Controller-->
         <scene sceneID="HxC-Jd-4Q9">
             <objects>
-                <viewController id="CAt-by-KER" customClass="ViewController" customModule="teamproject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CAt-by-KER" customClass="ViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCT-Zf-gt7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0U-RH-ngz">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aN-sI-SuH">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="834"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 정보 검색 어플" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9p-IL-Fi5">
-                                                <rect key="frame" x="20" y="20" width="374" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gza-Qh-OuN" userLabel="Search View">
-                                                <rect key="frame" x="20" y="40" width="374" height="548"/>
-                                                <subviews>
-                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdW-hI-AsZ" userLabel="Do Picker View">
-                                                        <rect key="frame" x="20" y="20" width="334" height="216"/>
-                                                    </pickerView>
-                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCr-yS-fQ6" userLabel="Si Picker View">
-                                                        <rect key="frame" x="20" y="256" width="334" height="216"/>
-                                                    </pickerView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4W-cp-3Rd" userLabel="Search Button">
-                                                        <rect key="frame" x="141" y="492" width="92" height="36"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <state key="normal" title="관광지 검색"/>
-                                                        <connections>
-                                                            <segue destination="4C2-xP-lhe" kind="show" id="ijL-aJ-NXV"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="iCr-yS-fQ6" firstAttribute="leading" secondItem="Gza-Qh-OuN" secondAttribute="leading" constant="20" id="9cz-tY-TsH"/>
-                                                    <constraint firstItem="PdW-hI-AsZ" firstAttribute="leading" secondItem="Gza-Qh-OuN" secondAttribute="leading" constant="20" id="Aek-c9-Byc"/>
-                                                    <constraint firstItem="iCr-yS-fQ6" firstAttribute="top" secondItem="PdW-hI-AsZ" secondAttribute="bottom" constant="20" id="Miz-D5-06r"/>
-                                                    <constraint firstAttribute="trailing" secondItem="iCr-yS-fQ6" secondAttribute="trailing" constant="20" id="YIV-pR-2cJ"/>
-                                                    <constraint firstItem="y4W-cp-3Rd" firstAttribute="centerX" secondItem="Gza-Qh-OuN" secondAttribute="centerX" id="Ygb-tH-EZK"/>
-                                                    <constraint firstItem="y4W-cp-3Rd" firstAttribute="top" secondItem="iCr-yS-fQ6" secondAttribute="bottom" constant="20" id="ZhE-oA-7QB"/>
-                                                    <constraint firstItem="PdW-hI-AsZ" firstAttribute="top" secondItem="Gza-Qh-OuN" secondAttribute="top" constant="20" id="cv1-6v-yyt"/>
-                                                    <constraint firstAttribute="trailing" secondItem="PdW-hI-AsZ" secondAttribute="trailing" constant="20" id="dt6-12-tQr"/>
-                                                    <constraint firstAttribute="bottom" secondItem="y4W-cp-3Rd" secondAttribute="bottom" constant="20" id="kbh-n7-KOQ"/>
-                                                </constraints>
-                                            </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Y-G7-oaJ" userLabel="Close Button">
-                                                <rect key="frame" x="20" y="608" width="374" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="근처 관광지 찾기"/>
-                                                <connections>
-                                                    <segue destination="oeZ-bx-VUw" kind="show" id="NVL-Xf-TQ4"/>
-                                                </connections>
-                                            </button>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-Tq-dDd" userLabel="Recomment Scroll View">
-                                                <rect key="frame" x="20" y="664" width="374" height="150"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l5Q-Yx-hJH">
-                                                        <rect key="frame" x="42" y="0.0" width="240" height="150"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="8Vy-5X-DLT"/>
-                                                    <constraint firstItem="l5Q-Yx-hJH" firstAttribute="height" secondItem="Bok-wd-bCG" secondAttribute="height" id="QAw-Sy-9cH"/>
-                                                    <constraint firstItem="l5Q-Yx-hJH" firstAttribute="top" secondItem="rx0-xv-1uz" secondAttribute="top" id="Wub-je-NtH"/>
-                                                    <constraint firstItem="l5Q-Yx-hJH" firstAttribute="trailing" secondItem="rx0-xv-1uz" secondAttribute="trailing" id="l2K-8f-T88"/>
-                                                    <constraint firstItem="l5Q-Yx-hJH" firstAttribute="bottom" secondItem="rx0-xv-1uz" secondAttribute="bottom" id="nNV-Db-StY"/>
-                                                    <constraint firstItem="l5Q-Yx-hJH" firstAttribute="leading" secondItem="rx0-xv-1uz" secondAttribute="leading" id="vnA-nL-lZR"/>
-                                                </constraints>
-                                                <viewLayoutGuide key="contentLayoutGuide" id="rx0-xv-1uz"/>
-                                                <viewLayoutGuide key="frameLayoutGuide" id="Bok-wd-bCG"/>
-                                            </scrollView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="f3Y-G7-oaJ" firstAttribute="top" secondItem="Gza-Qh-OuN" secondAttribute="bottom" constant="20" id="5wn-uS-dDK"/>
-                                            <constraint firstItem="kDf-Tq-dDd" firstAttribute="leading" secondItem="9aN-sI-SuH" secondAttribute="leading" constant="20" id="AhJ-JC-1ar"/>
-                                            <constraint firstAttribute="trailing" secondItem="Gza-Qh-OuN" secondAttribute="trailing" constant="20" id="Duh-DW-PMB"/>
-                                            <constraint firstItem="kDf-Tq-dDd" firstAttribute="top" secondItem="f3Y-G7-oaJ" secondAttribute="bottom" constant="20" id="IGm-LH-42c"/>
-                                            <constraint firstItem="f3Y-G7-oaJ" firstAttribute="leading" secondItem="9aN-sI-SuH" secondAttribute="leading" constant="20" id="MNk-KZ-OmV"/>
-                                            <constraint firstAttribute="trailing" secondItem="f3Y-G7-oaJ" secondAttribute="trailing" constant="20" id="T5f-Im-yCZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="g9p-IL-Fi5" secondAttribute="trailing" constant="20" id="TNN-PE-QUq"/>
-                                            <constraint firstItem="Gza-Qh-OuN" firstAttribute="top" secondItem="g9p-IL-Fi5" secondAttribute="top" constant="20" id="dQv-ty-A76"/>
-                                            <constraint firstAttribute="trailing" secondItem="kDf-Tq-dDd" secondAttribute="trailing" constant="20" id="hRL-Lb-LEv"/>
-                                            <constraint firstAttribute="bottom" secondItem="kDf-Tq-dDd" secondAttribute="bottom" constant="20" id="ilP-Bt-NDI"/>
-                                            <constraint firstItem="g9p-IL-Fi5" firstAttribute="top" secondItem="9aN-sI-SuH" secondAttribute="top" constant="20" id="lid-bd-TID"/>
-                                            <constraint firstItem="g9p-IL-Fi5" firstAttribute="leading" secondItem="9aN-sI-SuH" secondAttribute="leading" constant="20" id="m2e-RI-mDn"/>
-                                            <constraint firstItem="Gza-Qh-OuN" firstAttribute="leading" secondItem="9aN-sI-SuH" secondAttribute="leading" constant="20" id="ob0-hr-Sh7"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="9aN-sI-SuH" firstAttribute="leading" secondItem="gGA-hM-iSW" secondAttribute="leading" id="NP5-Vu-agQ"/>
-                                    <constraint firstItem="9aN-sI-SuH" firstAttribute="width" secondItem="8jG-Lc-CyI" secondAttribute="width" id="OD7-Z2-860"/>
-                                    <constraint firstItem="9aN-sI-SuH" firstAttribute="bottom" secondItem="gGA-hM-iSW" secondAttribute="bottom" id="chO-sx-9DU"/>
-                                    <constraint firstItem="9aN-sI-SuH" firstAttribute="top" secondItem="gGA-hM-iSW" secondAttribute="top" id="pbP-Nv-JpY"/>
-                                    <constraint firstItem="9aN-sI-SuH" firstAttribute="trailing" secondItem="gGA-hM-iSW" secondAttribute="trailing" id="vtb-9V-tEM"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="gGA-hM-iSW"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="8jG-Lc-CyI"/>
-                            </scrollView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PdW-hI-AsZ" userLabel="Do Picker View">
+                                <rect key="frame" x="40" y="88" width="334" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CAt-by-KER" id="0Fl-j5-L1V"/>
+                                    <outlet property="delegate" destination="CAt-by-KER" id="ve1-8P-Lsg"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-ft-2Gf">
+                                <rect key="frame" x="156" y="323" width="101" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="관광지 검색"/>
+                                <connections>
+                                    <segue destination="vSt-57-0EZ" kind="show" identifier="segueToTableView" id="5Gd-bH-w1H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIi-gV-plg">
+                                <rect key="frame" x="135" y="400" width="144" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="주변 관광지 검색"/>
+                                <connections>
+                                    <segue destination="oeZ-bx-VUw" kind="show" id="qp7-rM-0Yq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oyN-cN-OaO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="H0U-RH-ngz" firstAttribute="bottom" secondItem="aCT-Zf-gt7" secondAttribute="bottom" id="18z-ad-OWT"/>
-                            <constraint firstItem="H0U-RH-ngz" firstAttribute="top" secondItem="oyN-cN-OaO" secondAttribute="top" id="BnL-Pj-Vo6"/>
-                            <constraint firstItem="H0U-RH-ngz" firstAttribute="trailing" secondItem="oyN-cN-OaO" secondAttribute="trailing" id="rmb-t9-AgB"/>
-                            <constraint firstItem="H0U-RH-ngz" firstAttribute="leading" secondItem="oyN-cN-OaO" secondAttribute="leading" id="ylb-F0-FGY"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xlc-XC-b50"/>
+                    <connections>
+                        <outlet property="pickerView" destination="PdW-hI-AsZ" id="k1e-EK-gqe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfE-kc-XzV" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,21 +58,37 @@
         <!--관광지 검색-->
         <scene sceneID="Jds-Wp-h6A">
             <objects>
-                <tableViewController id="4C2-xP-lhe" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7fc-Xy-Jaa">
+                <tableViewController id="4C2-xP-lhe" customClass="TourlistTableViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7fc-Xy-Jaa" userLabel="Tb Data">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="K9u-T0-xUp">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="csM-PE-Kdl" detailTextLabel="6FX-mW-HpV" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="K9u-T0-xUp">
+                                <rect key="frame" x="0.0" y="28" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9u-T0-xUp" id="qBh-Qu-gcK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="csM-PE-Kdl">
+                                            <rect key="frame" x="20" y="9" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6FX-mW-HpV">
+                                            <rect key="frame" x="20" y="32.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="icu-vh-IxJ" kind="show" id="YIH-nb-NGx"/>
+                                    <segue destination="icu-vh-IxJ" kind="show" identifier="segueToInfoView" id="YIH-nb-NGx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -156,22 +97,32 @@
                             <outlet property="delegate" destination="4C2-xP-lhe" id="zxb-NA-18R"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="관광지 검색" id="omz-rv-hae"/>
+                    <navigationItem key="navigationItem" title="관광지 검색" id="omz-rv-hae">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="A3f-4W-5ra">
+                            <connections>
+                                <segue destination="uoN-2K-43O" kind="unwind" unwindAction="doneToPickerViewControllerWithSegue:" id="bzR-d6-pcE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tbData" destination="7fc-Xy-Jaa" id="olb-Kb-rzq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKw-Yl-05J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="uoN-2K-43O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1567" y="118"/>
+            <point key="canvasLocation" x="2344.9275362318845" y="117.85714285714285"/>
         </scene>
         <!--관광지 정보-->
         <scene sceneID="8MA-dj-8AS">
             <objects>
-                <viewController id="icu-vh-IxJ" sceneMemberID="viewController">
+                <viewController id="icu-vh-IxJ" customClass="TourInfosViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Os-X5-I9F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ka-3z-3mM">
-                                <rect key="frame" x="162" y="320" width="92" height="36"/>
+                                <rect key="frame" x="163" y="615" width="92" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="관광지 날씨"/>
@@ -180,7 +131,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kY-Vt-WqY">
-                                <rect key="frame" x="143" y="256" width="131" height="36"/>
+                                <rect key="frame" x="144" y="551" width="131" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="관광지 위치 보기"/>
@@ -189,7 +140,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ure-e6-w1y">
-                                <rect key="frame" x="123" y="364" width="166" height="36"/>
+                                <rect key="frame" x="124" y="659" width="166" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="근처 버스정류장 검색"/>
@@ -198,16 +149,16 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al4-u8-PFy">
-                                <rect key="frame" x="143" y="212" width="131" height="36"/>
+                                <rect key="frame" x="144" y="507" width="131" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="관광지 정보 보기"/>
                                 <connections>
-                                    <segue destination="jBd-Ng-x9S" kind="show" id="Umy-7Q-3PQ"/>
+                                    <segue destination="jBd-Ng-x9S" kind="show" identifier="segueToInformation" id="Umy-7Q-3PQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QM-eX-654">
-                                <rect key="frame" x="132" y="430" width="149" height="36"/>
+                                <rect key="frame" x="133" y="725" width="149" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="근처 숙박시설 검색"/>
@@ -223,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLm-5k-XCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2283" y="118"/>
+            <point key="canvasLocation" x="3192.753623188406" y="117.85714285714285"/>
         </scene>
         <!--관광지 위치 보기-->
         <scene sceneID="hVr-ov-Mri">
@@ -250,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VxA-kw-M3N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3522" y="501"/>
+            <point key="canvasLocation" x="4431.884057971015" y="500.89285714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ajE-bI-udL">
@@ -407,10 +358,37 @@
         <!--관광지 정보 보기-->
         <scene sceneID="bRm-p7-j80">
             <objects>
-                <viewController id="jBd-Ng-x9S" sceneMemberID="viewController">
+                <viewController id="jBd-Ng-x9S" customClass="TourInformationViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2fU-nb-Obv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf7-Oh-pXn">
+                                <rect key="frame" x="186" y="107" width="43" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Addr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YV5-Se-aoO">
+                                <rect key="frame" x="183" y="490" width="49" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QF7-dP-Psv">
+                                <rect key="frame" x="20" y="143" width="374" height="314"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-yj-dQi">
+                                <rect key="frame" x="194" y="544" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C3W-Gj-kuj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -418,7 +396,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTN-uA-xdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3522" y="-172"/>
+            <point key="canvasLocation" x="4431.884057971015" y="-172.09821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gWx-2S-Ciy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vSt-57-0EZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Vhe-cA-rEB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Ga-PV-zT7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4C2-xP-lhe" kind="relationship" relationship="rootViewController" id="3C5-9Q-eKQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pP-LX-62p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566.6666666666667" y="117.85714285714285"/>
         </scene>
     </scenes>
     <resources>
