@@ -13,11 +13,12 @@ class TourInformationViewController: ViewController {
     @IBOutlet weak var outlet_address: UILabel!
     @IBOutlet weak var outlet_tel: UILabel!
     @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var outlet_overview: UITextView!
     var name : String = ""
     var firstImage: String = ""
     var address: String = ""
     var telephone: String = ""
+    var overview: String = ""
     
     
     
@@ -45,6 +46,7 @@ class TourInformationViewController: ViewController {
         outlet_name.text = name
         outlet_address.text = address
         outlet_tel.text = telephone
+        outlet_overview.text = overview
     }
     
 

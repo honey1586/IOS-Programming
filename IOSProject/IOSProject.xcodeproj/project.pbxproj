@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,12 +15,14 @@
 		044DF75B26522D2C0007755D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044DF75926522D2C0007755D /* LaunchScreen.storyboard */; };
 		3AD033A2265A4EF600F2C35D /* TourInfoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */; };
 		3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A3265A699E00F2C35D /* MapMarker.swift */; };
+		7EE7775527801DFF3175FCE6 /* Pods_IOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD92B94F65501F467C633D5 /* Pods_IOSProject.framework */; };
 		A128EDBF2657AAA700C3B866 /* AreaCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = A128EDBE2657AAA700C3B866 /* AreaCodes.json */; };
 		A13B55D52658FEFA001E5706 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A13B55D42658FEFA001E5706 /* data.json */; };
 		A13B55DC26590BAA001E5706 /* AreaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B55DB26590BAA001E5706 /* AreaModels.swift */; };
 		A13B55DF26594DF1001E5706 /* TourlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B55DE26594DF1001E5706 /* TourlistTableViewController.swift */; };
 		A1BE88D02659C47F00F28B57 /* TourInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE88CF2659C47F00F28B57 /* TourInfosViewController.swift */; };
 		A1BE88D32659CC5300F28B57 /* TourInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE88D22659CC5300F28B57 /* TourInformationViewController.swift */; };
+		A1EE0592265A9D5B00BEDC49 /* TourWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE0591265A9D5B00BEDC49 /* TourWeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +36,16 @@
 		044DF75C26522D2C0007755D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInfoLocation.swift; sourceTree = "<group>"; };
 		3AD033A3265A699E00F2C35D /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
+		58AD6528E348DFEB07530FC8 /* Pods-IOSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProject.debug.xcconfig"; path = "Target Support Files/Pods-IOSProject/Pods-IOSProject.debug.xcconfig"; sourceTree = "<group>"; };
 		A128EDBE2657AAA700C3B866 /* AreaCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AreaCodes.json; sourceTree = "<group>"; };
 		A13B55D42658FEFA001E5706 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A13B55DB26590BAA001E5706 /* AreaModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModels.swift; sourceTree = "<group>"; };
 		A13B55DE26594DF1001E5706 /* TourlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourlistTableViewController.swift; sourceTree = "<group>"; };
 		A1BE88CF2659C47F00F28B57 /* TourInfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInfosViewController.swift; sourceTree = "<group>"; };
 		A1BE88D22659CC5300F28B57 /* TourInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInformationViewController.swift; sourceTree = "<group>"; };
+		A1EE0591265A9D5B00BEDC49 /* TourWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourWeatherViewController.swift; sourceTree = "<group>"; };
+		AFD92B94F65501F467C633D5 /* Pods_IOSProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E36B59BA7CC68DF140C5EBC7 /* Pods-IOSProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProject.release.xcconfig"; path = "Target Support Files/Pods-IOSProject/Pods-IOSProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE7775527801DFF3175FCE6 /* Pods_IOSProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +65,8 @@
 			children = (
 				044DF74D26522D2B0007755D /* IOSProject */,
 				044DF74C26522D2B0007755D /* Products */,
+				8033497504BDD67DA2A7E75D /* Pods */,
+				DD4DE817CA52189A1D2CDFAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,8 +96,26 @@
 				A1BE88D22659CC5300F28B57 /* TourInformationViewController.swift */,
 				3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */,
 				3AD033A3265A699E00F2C35D /* MapMarker.swift */,
+				A1EE0591265A9D5B00BEDC49 /* TourWeatherViewController.swift */,
 			);
 			path = IOSProject;
+			sourceTree = "<group>";
+		};
+		8033497504BDD67DA2A7E75D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58AD6528E348DFEB07530FC8 /* Pods-IOSProject.debug.xcconfig */,
+				E36B59BA7CC68DF140C5EBC7 /* Pods-IOSProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD4DE817CA52189A1D2CDFAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFD92B94F65501F467C633D5 /* Pods_IOSProject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 044DF75F26522D2C0007755D /* Build configuration list for PBXNativeTarget "IOSProject" */;
 			buildPhases = (
+				0E9FD47788F1CF9A8187990E /* [CP] Check Pods Manifest.lock */,
 				044DF74726522D2B0007755D /* Sources */,
 				044DF74826522D2B0007755D /* Frameworks */,
 				044DF74926522D2B0007755D /* Resources */,
+				126BFA8F62A018A9C7919BD4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +187,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E9FD47788F1CF9A8187990E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IOSProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		126BFA8F62A018A9C7919BD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSProject/Pods-IOSProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSProject/Pods-IOSProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IOSProject/Pods-IOSProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		044DF74726522D2B0007755D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -172,6 +243,7 @@
 				A13B55DF26594DF1001E5706 /* TourlistTableViewController.swift in Sources */,
 				A1BE88D32659CC5300F28B57 /* TourInformationViewController.swift in Sources */,
 				044DF75126522D2B0007755D /* SceneDelegate.swift in Sources */,
+				A1EE0592265A9D5B00BEDC49 /* TourWeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +387,7 @@
 		};
 		044DF76026522D2C0007755D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58AD6528E348DFEB07530FC8 /* Pods-IOSProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,6 +407,7 @@
 		};
 		044DF76126522D2C0007755D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E36B59BA7CC68DF140C5EBC7 /* Pods-IOSProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

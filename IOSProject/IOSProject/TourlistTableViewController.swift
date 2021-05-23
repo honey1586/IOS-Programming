@@ -10,6 +10,9 @@ import UIKit
 class TourlistTableViewController: UITableViewController,XMLParserDelegate{
     
     @IBOutlet var tbData: UITableView!
+    var weather_sido_temp : String = ""
+    var weather_sigugun_temp : String = ""
+    
     var result : Result?
     var url : String?
     
@@ -25,7 +28,7 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
     var sendcontentid : String = ""
     var sendurl = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&contentId="
     
-    
+   
     
     private func beginParsing()
     {
@@ -84,8 +87,8 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "segueToInfoView"{
 //            if let tourinfosViewController = segue.destination as? TourInfosViewController{
-//                tourinfosViewController.contentid = sendcontentid
-//                tourinfosViewController.detailurl = sendurl + sendcontentid + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
+//                tourinfosViewController.weather_sido_temp2 = weather_sido_temp
+//                tourinfosViewController.weather_sigugun_temp2 = weather_sigugun_temp
 //            }
 //        }
 //    }
@@ -189,6 +192,8 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
                 print("sendContentId : " + sendcontentid)
                 tinfos.contentid = sendcontentid
                 tinfos.detailurl = sendurl + sendcontentid + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
+                tinfos.weather_sido_temp2 = weather_sido_temp
+                tinfos.weather_sigugun_temp2 = weather_sigugun_temp
             }
         }
     }

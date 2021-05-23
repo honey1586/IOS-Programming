@@ -75,6 +75,8 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
                     changeNameToCode(sidoName: selectSido)
                     tourlistTableViewController.url = url + sidoCode + "&sigunguCode=" + sigugunCode + "&cat2=&cat3=&listYN=Y&modifiedtime=&"
                     tourlistTableViewController.result = result
+                    tourlistTableViewController.weather_sido_temp = selectSido
+                    tourlistTableViewController.weather_sigugun_temp = selectSigugun
                 }
             }
         }

@@ -15,6 +15,8 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
     @IBOutlet weak var outlet_nearHotel: UIButton!
     
     
+    var weather_sido_temp2: String = ""
+    var weather_sigugun_temp2: String = ""
     
     var contentid : String?
     var detailurl : String = ""
@@ -148,6 +150,7 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
                 tourinformationViewController.firstImage = firstimage as String
                 tourinformationViewController.address = addr1 as String
                 tourinformationViewController.telephone = tel as String
+                tourinformationViewController.overview = overview as String
             }
         }
         if segue.identifier == "segueToLocation" {
@@ -155,6 +158,12 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
                 tourInfoLocation.locationX = mapx as! NSString as String
                 tourInfoLocation.locationY = mapy as! NSString as String
                 tourInfoLocation.name = name as String
+            }
+        }
+        if segue.identifier == "segueToWeather" {
+            if let tourweather = segue.destination as? TourWeatherViewController {
+                tourweather.weather_sido = weather_sido_temp2
+                tourweather.weather_sigugun = weather_sigugun_temp2
             }
         }
     }
@@ -192,13 +201,18 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+     
     */
+    
 
     @IBAction func action_ShowInformation(_ sender: Any) {
         performSegue(withIdentifier: "segueToInformation", sender: nil)
     }
     @IBAction func action_showLocation(_ sender: Any) {
         performSegue(withIdentifier: "segueToLocation", sender: nil)
+    }
+    @IBAction func action_showWeather(_ sender: Any) {
+        performSegue(withIdentifier: "segueToWeather", sender: nil)
     }
     
 }
