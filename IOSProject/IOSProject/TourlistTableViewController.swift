@@ -93,6 +93,8 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         beginParsing()
+        
+        //print(url)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -124,10 +126,13 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         sendcontentid = (posts.object(at:indexPath.row) as AnyObject).value(forKey:"contentid") as! NSString as String
+        self.performSegue(withIdentifier: "segueToInfoView", sender: nil)
         
-        var tinfos = TourInfosViewController()
-        tinfos.contentid = sendcontentid
-        tinfos.detailurl = sendurl + sendcontentid + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
+        //print(sendcontentid)
+//        var tinfos = TourInfosViewController()
+//        tinfos.contentid = sendcontentid
+//        tinfos.detailurl = sendurl + sendcontentid + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
+        
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -174,14 +179,18 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "segueToInfoView" {
+            if let tinfos = segue.destination as? TourInfosViewController {
+                //sendcontentid = (posts.object(at:indexPath.row) as AnyObject).value(forKey:"contentid") as! NSString as String
+                print("sendContentId : " + sendcontentid)
+                tinfos.contentid = sendcontentid
+                tinfos.detailurl = sendurl + sendcontentid + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
+            }
+        }
     }
-    */
 
 }

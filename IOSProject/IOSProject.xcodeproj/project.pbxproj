@@ -13,6 +13,8 @@
 		044DF75626522D2B0007755D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044DF75426522D2B0007755D /* Main.storyboard */; };
 		044DF75826522D2C0007755D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044DF75726522D2C0007755D /* Assets.xcassets */; };
 		044DF75B26522D2C0007755D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044DF75926522D2C0007755D /* LaunchScreen.storyboard */; };
+		3AD033A2265A4EF600F2C35D /* TourInfoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */; };
+		3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A3265A699E00F2C35D /* MapMarker.swift */; };
 		A128EDBF2657AAA700C3B866 /* AreaCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = A128EDBE2657AAA700C3B866 /* AreaCodes.json */; };
 		A13B55D52658FEFA001E5706 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A13B55D42658FEFA001E5706 /* data.json */; };
 		A13B55DC26590BAA001E5706 /* AreaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B55DB26590BAA001E5706 /* AreaModels.swift */; };
@@ -30,6 +32,8 @@
 		044DF75726522D2C0007755D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044DF75A26522D2C0007755D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044DF75C26522D2C0007755D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInfoLocation.swift; sourceTree = "<group>"; };
+		3AD033A3265A699E00F2C35D /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		A128EDBE2657AAA700C3B866 /* AreaCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AreaCodes.json; sourceTree = "<group>"; };
 		A13B55D42658FEFA001E5706 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A13B55DB26590BAA001E5706 /* AreaModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModels.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				A13B55DE26594DF1001E5706 /* TourlistTableViewController.swift */,
 				A1BE88CF2659C47F00F28B57 /* TourInfosViewController.swift */,
 				A1BE88D22659CC5300F28B57 /* TourInformationViewController.swift */,
+				3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */,
+				3AD033A3265A699E00F2C35D /* MapMarker.swift */,
 			);
 			path = IOSProject;
 			sourceTree = "<group>";
@@ -157,10 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD033A2265A4EF600F2C35D /* TourInfoLocation.swift in Sources */,
 				A13B55DC26590BAA001E5706 /* AreaModels.swift in Sources */,
 				044DF75326522D2B0007755D /* ViewController.swift in Sources */,
 				A1BE88D02659C47F00F28B57 /* TourInfosViewController.swift in Sources */,
 				044DF74F26522D2B0007755D /* AppDelegate.swift in Sources */,
+				3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */,
 				A13B55DF26594DF1001E5706 /* TourlistTableViewController.swift in Sources */,
 				A1BE88D32659CC5300F28B57 /* TourInformationViewController.swift in Sources */,
 				044DF75126522D2B0007755D /* SceneDelegate.swift in Sources */,

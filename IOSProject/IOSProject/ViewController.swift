@@ -10,8 +10,8 @@ import UIKit
 class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewDataSource{
     var result: Result?
     
-    var selectSido:String = "서울" // 디폴트
-    var selectSigugun:String = "강남구" // 디폴트
+    var selectSido: String = "서울" // 디폴트
+    var selectSigugun: String = "강남구" // 디폴트
     
     // url에 넣기 위한 코드로 변환할 변수
     var sidoCode : String = ""
@@ -49,15 +49,21 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        pickerView.reloadComponent(1)
-        
-        let selectedSido = pickerView.selectedRow(inComponent: 0)
-        let selectedSigugun = pickerView.selectedRow(inComponent: 1)
-        let sido = result!.data[selectedSido].title
-        let sigugun = result!.data[selectedSido].items[selectedSigugun]
-       
-        selectSido = sido
-        selectSigugun = sigugun
+        if component == 0 {
+            let selectedSido = pickerView.selectedRow(inComponent: 0)
+            let sido = result!.data[selectedSido].title
+            selectSido = sido
+            selectSigugun = result!.data[selectedSido].items[0]
+            
+            pickerView.reloadComponent(1)
+            pickerView.selectRow(0, inComponent: 1, animated: true)
+        }
+        else {
+            let selectedSido = pickerView.selectedRow(inComponent: 0)
+            let selectedSigugun = pickerView.selectedRow(inComponent: 1)
+            let sigugun = result!.data[selectedSido].items[selectedSigugun]
+            selectSigugun = sigugun
+        }
         
         sigugunCode = String(pickerView.selectedRow(inComponent: 1) + 1)
     }

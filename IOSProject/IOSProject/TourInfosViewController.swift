@@ -8,6 +8,14 @@
 import UIKit
 
 class TourInfosViewController: ViewController,XMLParserDelegate {
+    @IBOutlet weak var outlet_showInformation: UIButton!
+    @IBOutlet weak var outlet_showLocation: UIButton!
+    @IBOutlet weak var outlet_showWeather: UIButton!
+    @IBOutlet weak var outlet_nearBusstop: UIButton!
+    @IBOutlet weak var outlet_nearHotel: UIButton!
+    
+    
+    
     var contentid : String?
     var detailurl : String = ""
     
@@ -137,15 +145,41 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
         if segue.identifier == "segueToInformation"{
             if let tourinformationViewController = segue.destination as? TourInformationViewController{
                 tourinformationViewController.name = name as String
+                tourinformationViewController.firstImage = firstimage as String
+                tourinformationViewController.address = addr1 as String
+                tourinformationViewController.telephone = tel as String
+            }
+        }
+        if segue.identifier == "segueToLocation" {
+            if let tourInfoLocation = segue.destination as? TourInfoLocation {
+                tourInfoLocation.locationX = mapx as! NSString as String
+                tourInfoLocation.locationY = mapy as! NSString as String
+                tourInfoLocation.name = name as String
             }
         }
     }
     
     override func viewDidLoad() {
-        print(detailurl)
         super.viewDidLoad()
-//        beginParsing()
+        beginParsing()
         // Do any additional setup after loading the view.
+        
+        //print("detailurl : " + detailurl)
+        //print("contentid : " + contentid!)
+        
+        // Button custom
+        customButton(button: outlet_showInformation)
+        customButton(button: outlet_showLocation)
+        customButton(button: outlet_showWeather)
+        customButton(button: outlet_nearBusstop)
+        customButton(button: outlet_nearHotel)
+    }
+    
+    
+    func customButton(button: UIButton) {
+        button.tintColor = .white
+        button.layer.backgroundColor = UIColor.gray.cgColor
+        button.layer.cornerRadius = 10
         
     }
     
@@ -160,4 +194,11 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
     }
     */
 
+    @IBAction func action_ShowInformation(_ sender: Any) {
+        performSegue(withIdentifier: "segueToInformation", sender: nil)
+    }
+    @IBAction func action_showLocation(_ sender: Any) {
+        performSegue(withIdentifier: "segueToLocation", sender: nil)
+    }
+    
 }
