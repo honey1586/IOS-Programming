@@ -144,7 +144,6 @@
                                 <state key="normal" title="관광지 날씨"/>
                                 <connections>
                                     <action selector="action_showWeather:" destination="icu-vh-IxJ" eventType="touchUpInside" id="u7U-wq-SZb"/>
-                                    <segue destination="FzZ-80-Toa" kind="show" identifier="segueToWeather" id="Nig-GM-q3M"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ure-e6-w1y">
@@ -202,6 +201,7 @@
                         <outlet property="outlet_showWeather" destination="8Ka-3z-3mM" id="WBr-1K-AUt"/>
                         <segue destination="jBd-Ng-x9S" kind="show" identifier="segueToInformation" id="nNS-UM-28g"/>
                         <segue destination="R4h-qL-rud" kind="show" identifier="segueToLocation" id="X1S-8o-SQe"/>
+                        <segue destination="FzZ-80-Toa" kind="show" identifier="segueToWeather" id="eur-Qk-VNC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLm-5k-XCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -334,10 +334,21 @@
         <!--근처 관광지 찾기-->
         <scene sceneID="flD-Wk-L4d">
             <objects>
-                <viewController id="oeZ-bx-VUw" sceneMemberID="viewController">
+                <viewController id="oeZ-bx-VUw" customClass="NearTourSearchViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rk5-TM-lCy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYB-4E-vU0">
+                                <rect key="frame" x="146" y="153" width="123" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="test:" destination="oeZ-bx-VUw" eventType="touchUpInside" id="Ciy-XO-Cqm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0hn-V3-DSZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -345,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuR-hD-9U1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="812"/>
+            <point key="canvasLocation" x="847.82608695652175" y="811.60714285714278"/>
         </scene>
         <!--근처 버스정류장 검색-->
         <scene sceneID="Mua-gS-Gea">

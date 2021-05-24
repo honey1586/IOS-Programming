@@ -22,6 +22,7 @@
 		A13B55DF26594DF1001E5706 /* TourlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B55DE26594DF1001E5706 /* TourlistTableViewController.swift */; };
 		A1BE88D02659C47F00F28B57 /* TourInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE88CF2659C47F00F28B57 /* TourInfosViewController.swift */; };
 		A1BE88D32659CC5300F28B57 /* TourInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BE88D22659CC5300F28B57 /* TourInformationViewController.swift */; };
+		A1E8C492265B668200610114 /* NearTourSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E8C491265B668200610114 /* NearTourSearchViewController.swift */; };
 		A1EE0592265A9D5B00BEDC49 /* TourWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EE0591265A9D5B00BEDC49 /* TourWeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		A13B55DE26594DF1001E5706 /* TourlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourlistTableViewController.swift; sourceTree = "<group>"; };
 		A1BE88CF2659C47F00F28B57 /* TourInfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInfosViewController.swift; sourceTree = "<group>"; };
 		A1BE88D22659CC5300F28B57 /* TourInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInformationViewController.swift; sourceTree = "<group>"; };
+		A1E8C491265B668200610114 /* NearTourSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearTourSearchViewController.swift; sourceTree = "<group>"; };
 		A1EE0591265A9D5B00BEDC49 /* TourWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourWeatherViewController.swift; sourceTree = "<group>"; };
 		AFD92B94F65501F467C633D5 /* Pods_IOSProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36B59BA7CC68DF140C5EBC7 /* Pods-IOSProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProject.release.xcconfig"; path = "Target Support Files/Pods-IOSProject/Pods-IOSProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */,
 				3AD033A3265A699E00F2C35D /* MapMarker.swift */,
 				A1EE0591265A9D5B00BEDC49 /* TourWeatherViewController.swift */,
+				A1E8C491265B668200610114 /* NearTourSearchViewController.swift */,
 			);
 			path = IOSProject;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				3AD033A2265A4EF600F2C35D /* TourInfoLocation.swift in Sources */,
 				A13B55DC26590BAA001E5706 /* AreaModels.swift in Sources */,
 				044DF75326522D2B0007755D /* ViewController.swift in Sources */,
+				A1E8C492265B668200610114 /* NearTourSearchViewController.swift in Sources */,
 				A1BE88D02659C47F00F28B57 /* TourInfosViewController.swift in Sources */,
 				044DF74F26522D2B0007755D /* AppDelegate.swift in Sources */,
 				3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */,
