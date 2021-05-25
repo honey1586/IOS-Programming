@@ -14,8 +14,8 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     var selectSigugun: String = "강남구" // 디폴트
     
     // url에 넣기 위한 코드로 변환할 변수
-    var sidoCode : String = ""
-    var sigugunCode : String = ""
+    var sidoCode : String = "1"
+    var sigugunCode : String = "1"
         
     var url : String = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=50&pageNo=1&MobileApp=TourAPI3.0_Guide&MobileOS=ETC&arrange=A&cat1=&contentTypeId=&areaCode="
     
@@ -24,7 +24,7 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     @IBOutlet weak var outlet_searchButton: UIButton!
     
     
-    
+    var motel_urlString = " http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchStay?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&listYN=Y"
         
     
     
@@ -88,9 +88,10 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
             let selectedSigugun = pickerView.selectedRow(inComponent: 1)
             let sigugun = result!.data[selectedSido].items[selectedSigugun]
             selectSigugun = sigugun
+            sigugunCode = String(pickerView.selectedRow(inComponent: 1) + 1)
         }
         
-        sigugunCode = String(pickerView.selectedRow(inComponent: 1) + 1)
+        
     }
     
     
@@ -106,6 +107,8 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
                     tourlistTableViewController.result = result
                     tourlistTableViewController.weather_sido_temp = selectSido
                     tourlistTableViewController.weather_sigugun_temp = selectSigugun
+                    tourlistTableViewController.motel_sidocode_temp = sidoCode
+                    tourlistTableViewController.motel_siguguncode_temp = sigugunCode
             }
         }
     }

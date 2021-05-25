@@ -12,11 +12,14 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
     @IBOutlet weak var outlet_showLocation: UIButton!
     @IBOutlet weak var outlet_showWeather: UIButton!
     @IBOutlet weak var outlet_nearBusstop: UIButton!
-    @IBOutlet weak var outlet_nearHotel: UIButton!
+    @IBOutlet weak var outlet_nearMotel: UIButton!
     
     
     var weather_sido_temp2: String = ""
     var weather_sigugun_temp2: String = ""
+    
+    var motel_sidocode_temp2 : String = ""
+    var motel_siguguncode_temp2: String = ""
     
     var contentid : String?
     var detailurl : String = ""
@@ -166,6 +169,12 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
                 tourweather.weather_sigugun = weather_sigugun_temp2
             }
         }
+        if segue.identifier == "segueToMotel" {
+            if let nearMotel = segue.destination as? NearMotelTableViewController {
+                nearMotel.motel_sido_code = motel_sidocode_temp2
+                nearMotel.motel_sigugun_code = motel_siguguncode_temp2
+            }
+        }
     }
     
     
@@ -185,7 +194,7 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
         customButton(button: outlet_showLocation)
         customButton(button: outlet_showWeather)
         customButton(button: outlet_nearBusstop)
-        customButton(button: outlet_nearHotel)
+        customButton(button: outlet_nearMotel)
     }
     
     
@@ -221,5 +230,9 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
     @IBAction func action_showWeather(_ sender: Any) {
         performSegue(withIdentifier: "segueToWeather", sender: nil)
     }
+    @IBAction func action_nearMotel(_ sender: Any) {
+        performSegue(withIdentifier: "segueToMotel", sender: nil)
+    }
+    
     
 }

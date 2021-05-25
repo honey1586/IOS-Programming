@@ -19,6 +19,7 @@
 		3AD033A2265A4EF600F2C35D /* TourInfoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */; };
 		3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A3265A699E00F2C35D /* MapMarker.swift */; };
 		7EE7775527801DFF3175FCE6 /* Pods_IOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD92B94F65501F467C633D5 /* Pods_IOSProject.framework */; };
+		A1179276265D731D0045DA6E /* NearMotelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1179275265D731D0045DA6E /* NearMotelTableViewController.swift */; };
 		A128EDBF2657AAA700C3B866 /* AreaCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = A128EDBE2657AAA700C3B866 /* AreaCodes.json */; };
 		A13B55D52658FEFA001E5706 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A13B55D42658FEFA001E5706 /* data.json */; };
 		A13B55DC26590BAA001E5706 /* AreaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B55DB26590BAA001E5706 /* AreaModels.swift */; };
@@ -44,6 +45,7 @@
 		3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInfoLocation.swift; sourceTree = "<group>"; };
 		3AD033A3265A699E00F2C35D /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		58AD6528E348DFEB07530FC8 /* Pods-IOSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProject.debug.xcconfig"; path = "Target Support Files/Pods-IOSProject/Pods-IOSProject.debug.xcconfig"; sourceTree = "<group>"; };
+		A1179275265D731D0045DA6E /* NearMotelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMotelTableViewController.swift; sourceTree = "<group>"; };
 		A128EDBE2657AAA700C3B866 /* AreaCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AreaCodes.json; sourceTree = "<group>"; };
 		A13B55D42658FEFA001E5706 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A13B55DB26590BAA001E5706 /* AreaModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModels.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				A1EE0591265A9D5B00BEDC49 /* TourWeatherViewController.swift */,
 				A1E8C491265B668200610114 /* NearTourSearchViewController.swift */,
 				3A6F601A265CE27500E4B493 /* TourlistTableViewCell.swift */,
+				A1179275265D731D0045DA6E /* NearMotelTableViewController.swift */,
 			);
 			path = IOSProject;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				A13B55DF26594DF1001E5706 /* TourlistTableViewController.swift in Sources */,
 				A1BE88D32659CC5300F28B57 /* TourInformationViewController.swift in Sources */,
 				044DF75126522D2B0007755D /* SceneDelegate.swift in Sources */,
+				A1179276265D731D0045DA6E /* NearMotelTableViewController.swift in Sources */,
 				A1EE0592265A9D5B00BEDC49 /* TourWeatherViewController.swift in Sources */,
 				3A6F601B265CE27500E4B493 /* TourlistTableViewCell.swift in Sources */,
 			);

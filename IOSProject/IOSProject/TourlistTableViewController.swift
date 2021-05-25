@@ -13,6 +13,9 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
     var weather_sido_temp : String = ""
     var weather_sigugun_temp : String = ""
     
+    var motel_sidocode_temp : String = ""
+    var motel_siguguncode_temp : String = ""
+    
     var result : Result?
     var url : String?
     
@@ -194,6 +197,8 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
                 tinfos.detailurl = sendurl + sendcontentid + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
                 tinfos.weather_sido_temp2 = weather_sido_temp
                 tinfos.weather_sigugun_temp2 = weather_sigugun_temp
+                tinfos.motel_sidocode_temp2 = motel_sidocode_temp
+                tinfos.motel_siguguncode_temp2 = motel_siguguncode_temp
             }
         }
     }

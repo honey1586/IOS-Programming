@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ex-2H-22i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ex-2H-22i">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -103,7 +103,7 @@
                         <color key="sectionIndexBackgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="K9u-T0-xUp" customClass="TourlistTableViewCell" customModule="IOSProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="71"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9u-T0-xUp" id="qBh-Qu-gcK">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
@@ -236,7 +236,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="근처 숙박시설 검색"/>
                                 <connections>
-                                    <segue destination="Rby-Sk-PIJ" kind="show" id="geG-nu-54J"/>
+                                    <action selector="action_nearMotel:" destination="icu-vh-IxJ" eventType="touchUpInside" id="95D-Sl-kMz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -272,13 +272,14 @@
                     <navigationItem key="navigationItem" title="관광지 정보" id="lAi-cT-JBL"/>
                     <connections>
                         <outlet property="outlet_nearBusstop" destination="Ure-e6-w1y" id="fAr-KL-WC0"/>
-                        <outlet property="outlet_nearHotel" destination="3QM-eX-654" id="frZ-mD-dbm"/>
+                        <outlet property="outlet_nearMotel" destination="3QM-eX-654" id="7aB-81-nCe"/>
                         <outlet property="outlet_showInformation" destination="al4-u8-PFy" id="TAM-CC-n5p"/>
                         <outlet property="outlet_showLocation" destination="8kY-Vt-WqY" id="J4U-gu-sja"/>
                         <outlet property="outlet_showWeather" destination="8Ka-3z-3mM" id="WBr-1K-AUt"/>
                         <segue destination="jBd-Ng-x9S" kind="show" identifier="segueToInformation" id="nNS-UM-28g"/>
                         <segue destination="R4h-qL-rud" kind="show" identifier="segueToLocation" id="X1S-8o-SQe"/>
                         <segue destination="FzZ-80-Toa" kind="show" identifier="segueToWeather" id="eur-Qk-VNC"/>
+                        <segue destination="Rby-Sk-PIJ" kind="show" identifier="segueToMotel" id="fuy-Pj-a3B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLm-5k-XCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -349,21 +350,37 @@
             </objects>
             <point key="canvasLocation" x="1902.8985507246377" y="811.60714285714278"/>
         </scene>
-        <!--근처 숙박시설 검색-->
+        <!--근처 숙박시설-->
         <scene sceneID="Yfd-4J-IcD">
             <objects>
-                <tableViewController id="Rby-Sk-PIJ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4DE-ja-mrh">
+                <tableViewController id="Rby-Sk-PIJ" customClass="NearMotelTableViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Motel Tb Data" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4DE-ja-mrh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Veg-fb-KLa">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="uEd-6M-yZ2" detailTextLabel="Vk2-kg-pvo" style="IBUITableViewCellStyleSubtitle" id="Veg-fb-KLa">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Veg-fb-KLa" id="iFM-Nt-V5a">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uEd-6M-yZ2">
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vk2-kg-pvo">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="rcR-cF-bgM" kind="show" id="83R-ZR-y2o"/>
@@ -375,7 +392,10 @@
                             <outlet property="delegate" destination="Rby-Sk-PIJ" id="9fe-nu-MI0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="근처 숙박시설 검색" id="0Jm-gv-fl9"/>
+                    <navigationItem key="navigationItem" title="근처 숙박시설" id="0Jm-gv-fl9"/>
+                    <connections>
+                        <outlet property="moteltbData" destination="4DE-ja-mrh" id="W7P-3k-AnP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTe-nT-1gC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -388,9 +408,13 @@
                     <view key="view" contentMode="scaleToFill" id="nhp-as-0Px">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpj-I5-i4i">
-                                <rect key="frame" x="170" y="500" width="75" height="36"/>
+                        <viewLayoutGuide key="safeArea" id="krn-3C-x9q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="숙박시설 정보" id="uLS-CH-O0I">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="6KM-iQ-V0G">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Jpj-I5-i4i">
+                                <rect key="frame" x="319" y="4" width="75" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="위치 보기"/>
@@ -398,11 +422,8 @@
                                     <segue destination="jdE-ed-Fns" kind="show" id="Jne-9b-YLA"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="krn-3C-x9q"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="숙박시설 정보" id="uLS-CH-O0I"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjZ-R9-VAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -490,20 +511,20 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCA-bA-sKL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="643"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="610.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4F-IZ-1wK" userLabel="Name View">
-                                                <rect key="frame" x="20" y="20" width="374" height="90"/>
+                                                <rect key="frame" x="20" y="20" width="374" height="83.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mb-PJ-Nmz" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="10" width="334" height="23.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf7-Oh-pXn">
-                                                        <rect key="frame" x="20" y="50" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="43.5" width="334" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="bgz-my-3mc"/>
@@ -525,17 +546,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-Os-z40" userLabel="Image View">
-                                                <rect key="frame" x="20" y="130" width="374" height="160"/>
+                                                <rect key="frame" x="20" y="123.5" width="374" height="153.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 사진" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oy-kq-3s3" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="10" width="334" height="23.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QF7-dP-Psv">
-                                                        <rect key="frame" x="20" y="50" width="334" height="100"/>
+                                                        <rect key="frame" x="20" y="43.5" width="334" height="100"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="PGj-eu-T9I"/>
@@ -554,17 +575,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ws6-yy-3L2" userLabel="Address View">
-                                                <rect key="frame" x="20" y="310" width="374" height="90"/>
+                                                <rect key="frame" x="20" y="297" width="374" height="83.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 주소" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrQ-mO-5KP" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="10" width="334" height="23.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YV5-Se-aoO">
-                                                        <rect key="frame" x="20" y="50" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="43.5" width="334" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="UCg-YG-Jtc"/>
@@ -586,17 +607,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVA-II-CsA" userLabel="Tel View">
-                                                <rect key="frame" x="20" y="420" width="374" height="90"/>
+                                                <rect key="frame" x="20" y="400.5" width="374" height="83.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 전화번호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK1-Rd-oFl" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="10" width="334" height="23.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-yj-dQi">
-                                                        <rect key="frame" x="20" y="50" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="43.5" width="334" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="JAu-38-nly"/>
@@ -618,17 +639,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLv-xJ-orT" userLabel="Overview View">
-                                                <rect key="frame" x="20" y="530" width="374" height="93"/>
+                                                <rect key="frame" x="20" y="504" width="374" height="86.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 설명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTc-gh-xPH" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="10" width="334" height="23.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="CGz-Oq-ftq">
-                                                        <rect key="frame" x="20" y="50" width="334" height="33"/>
+                                                        <rect key="frame" x="20" y="43.5" width="334" height="33"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
