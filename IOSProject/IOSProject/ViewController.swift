@@ -20,12 +20,37 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     var url : String = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=50&pageNo=1&MobileApp=TourAPI3.0_Guide&MobileOS=ETC&arrange=A&cat1=&contentTypeId=&areaCode="
     
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var outlet_seartchView: UIView!
+    @IBOutlet weak var outlet_searchButton: UIButton!
+    
+    
+    
         
+    
+    
+    
+    
     @IBAction func doneToPickerViewController(segue:UIStoryboardSegue){
-        
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var label = UILabel()
+        if let v = view {
+            label = v as! UILabel
+        }
+        label.font = UIFont(name: "IBMPlexSansKR-Light", size: 20)
+        if component == 0 {
+            label.text = result!.data[row].title
+        }
+        else {
+            let selectedSido = pickerView.selectedRow(inComponent: 0)
+            label.text = result!.data[selectedSido].items[row]
+        }
+        label.textAlignment = .center
+        return label
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -68,28 +93,52 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         sigugunCode = String(pickerView.selectedRow(inComponent: 1) + 1)
     }
     
+    
+    
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToTableView"{
-            if let navController = segue.destination as? UINavigationController{
-                if let tourlistTableViewController = navController.topViewController as? TourlistTableViewController{
+            if let tourlistTableViewController = segue.destination as? TourlistTableViewController{
                     changeNameToCode(sidoName: selectSido)
                     tourlistTableViewController.url = url + sidoCode + "&sigunguCode=" + sigugunCode + "&cat2=&cat3=&listYN=Y&modifiedtime=&"
                     tourlistTableViewController.result = result
                     tourlistTableViewController.weather_sido_temp = selectSido
                     tourlistTableViewController.weather_sigugun_temp = selectSigugun
-                }
             }
         }
     }
     
     
     
+    
+    // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         parseJson()
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
         
+        if let searchButton = outlet_searchButton {
+            searchButton.layer.cornerRadius = searchButton.bounds.height / 2.0
+        }
+        if let searchView = outlet_seartchView {
+            searchView.layer.cornerRadius = 25
+            searchView.layer.shadowColor = UIColor.black.cgColor
+            searchView.layer.shadowOffset = CGSize(width: 0, height: 0)
+            searchView.layer.shadowRadius = 4
+            searchView.layer.shadowOpacity = 0.2
+        }
     }
+    
+    
+    
+    
+    
     
     private func parseJson() {
         guard let path = Bundle.main.path(forResource: "data", ofType: "json") else {

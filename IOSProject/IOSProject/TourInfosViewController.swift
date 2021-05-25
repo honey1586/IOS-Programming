@@ -168,6 +168,10 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
         }
     }
     
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         beginParsing()
@@ -186,13 +190,16 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
     
     
     func customButton(button: UIButton) {
+        button.titleLabel!.font = UIFont(name: "IBMPlexSansKR-Light.otf", size: 20.0)
         button.tintColor = .white
-        button.layer.backgroundColor = UIColor.gray.cgColor
-        button.layer.cornerRadius = 10
+        button.layer.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0).cgColor
+        button.layer.cornerRadius = button.bounds.height / 2.0
         
     }
     
 
+    
+    
     /*
     // MARK: - Navigation
 

@@ -119,10 +119,10 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TourlistTableViewCell
         
-        cell.textLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "title") as! NSString as String
-        cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "addr1") as! NSString as String
+        cell.nameLabel.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "title") as! NSString as String
+        cell.addressLabel.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "addr1") as! NSString as String
         
         return cell
     }
@@ -189,7 +189,7 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
         if segue.identifier == "segueToInfoView" {
             if let tinfos = segue.destination as? TourInfosViewController {
                 //sendcontentid = (posts.object(at:indexPath.row) as AnyObject).value(forKey:"contentid") as! NSString as String
-                print("sendContentId : " + sendcontentid)
+                //print("sendContentId : " + sendcontentid)
                 tinfos.contentid = sendcontentid
                 tinfos.detailurl = sendurl + sendcontentid + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
                 tinfos.weather_sido_temp2 = weather_sido_temp
