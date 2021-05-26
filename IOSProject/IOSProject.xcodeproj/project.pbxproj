@@ -21,6 +21,8 @@
 		7EE7775527801DFF3175FCE6 /* Pods_IOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD92B94F65501F467C633D5 /* Pods_IOSProject.framework */; };
 		A1179276265D731D0045DA6E /* NearMotelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1179275265D731D0045DA6E /* NearMotelTableViewController.swift */; };
 		A128EDBF2657AAA700C3B866 /* AreaCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = A128EDBE2657AAA700C3B866 /* AreaCodes.json */; };
+		A13443E5265E3F7800A454F1 /* NearMotelInfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13443E4265E3F7800A454F1 /* NearMotelInfomationViewController.swift */; };
+		A13443E8265E4B2300A454F1 /* MotelInfoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13443E7265E4B2300A454F1 /* MotelInfoLocation.swift */; };
 		A13B55D52658FEFA001E5706 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A13B55D42658FEFA001E5706 /* data.json */; };
 		A13B55DC26590BAA001E5706 /* AreaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B55DB26590BAA001E5706 /* AreaModels.swift */; };
 		A13B55DF26594DF1001E5706 /* TourlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13B55DE26594DF1001E5706 /* TourlistTableViewController.swift */; };
@@ -47,6 +49,8 @@
 		58AD6528E348DFEB07530FC8 /* Pods-IOSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProject.debug.xcconfig"; path = "Target Support Files/Pods-IOSProject/Pods-IOSProject.debug.xcconfig"; sourceTree = "<group>"; };
 		A1179275265D731D0045DA6E /* NearMotelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMotelTableViewController.swift; sourceTree = "<group>"; };
 		A128EDBE2657AAA700C3B866 /* AreaCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AreaCodes.json; sourceTree = "<group>"; };
+		A13443E4265E3F7800A454F1 /* NearMotelInfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMotelInfomationViewController.swift; sourceTree = "<group>"; };
+		A13443E7265E4B2300A454F1 /* MotelInfoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotelInfoLocation.swift; sourceTree = "<group>"; };
 		A13B55D42658FEFA001E5706 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		A13B55DB26590BAA001E5706 /* AreaModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModels.swift; sourceTree = "<group>"; };
 		A13B55DE26594DF1001E5706 /* TourlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourlistTableViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				A1E8C491265B668200610114 /* NearTourSearchViewController.swift */,
 				3A6F601A265CE27500E4B493 /* TourlistTableViewCell.swift */,
 				A1179275265D731D0045DA6E /* NearMotelTableViewController.swift */,
+				A13443E4265E3F7800A454F1 /* NearMotelInfomationViewController.swift */,
+				A13443E7265E4B2300A454F1 /* MotelInfoLocation.swift */,
 			);
 			path = IOSProject;
 			sourceTree = "<group>";
@@ -251,10 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A13443E8265E4B2300A454F1 /* MotelInfoLocation.swift in Sources */,
 				3AD033A2265A4EF600F2C35D /* TourInfoLocation.swift in Sources */,
 				A13B55DC26590BAA001E5706 /* AreaModels.swift in Sources */,
 				044DF75326522D2B0007755D /* ViewController.swift in Sources */,
 				A1E8C492265B668200610114 /* NearTourSearchViewController.swift in Sources */,
+				A13443E5265E3F7800A454F1 /* NearMotelInfomationViewController.swift in Sources */,
 				A1BE88D02659C47F00F28B57 /* TourInfosViewController.swift in Sources */,
 				044DF74F26522D2B0007755D /* AppDelegate.swift in Sources */,
 				3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */,

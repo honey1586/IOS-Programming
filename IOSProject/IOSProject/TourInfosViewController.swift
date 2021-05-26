@@ -11,7 +11,6 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
     @IBOutlet weak var outlet_showInformation: UIButton!
     @IBOutlet weak var outlet_showLocation: UIButton!
     @IBOutlet weak var outlet_showWeather: UIButton!
-    @IBOutlet weak var outlet_nearBusstop: UIButton!
     @IBOutlet weak var outlet_nearMotel: UIButton!
     
     
@@ -193,7 +192,6 @@ class TourInfosViewController: ViewController,XMLParserDelegate {
         customButton(button: outlet_showInformation)
         customButton(button: outlet_showLocation)
         customButton(button: outlet_showWeather)
-        customButton(button: outlet_nearBusstop)
         customButton(button: outlet_nearMotel)
     }
     

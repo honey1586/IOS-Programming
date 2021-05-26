@@ -31,6 +31,14 @@ class NearMotelTableViewController: UITableViewController ,XMLParserDelegate{
     var motel_image = NSMutableString()
     var motel_mapx = NSMutableString()
     var motel_mapy = NSMutableString()
+    var motel_tel = NSMutableString()
+     
+    var send_title :String = ""
+    var send_addr : String = ""
+    var send_tel : String = ""
+    var send_image : String = ""
+    var send_mapx : String = ""
+    var send_mapy : String = ""
     
     
     private func beginParsing()
@@ -59,6 +67,8 @@ class NearMotelTableViewController: UITableViewController ,XMLParserDelegate{
             motel_mapx = ""
             motel_mapy = NSMutableString()
             motel_mapy = ""
+            motel_tel = NSMutableString()
+            motel_tel = ""
         }
     }
     
@@ -74,6 +84,8 @@ class NearMotelTableViewController: UITableViewController ,XMLParserDelegate{
             motel_mapx.append(string)
         } else if motel_element.isEqual(to: "mapy") {
             motel_mapy.append(string)
+        } else if motel_element.isEqual(to: "tel") {
+            motel_tel.append(string)
         }
     }
     
@@ -95,11 +107,16 @@ class NearMotelTableViewController: UITableViewController ,XMLParserDelegate{
             if !motel_mapy.isEqual(nil){
                 motel_elements.setObject(motel_mapy, forKey: "mapy" as NSCopying)
             }
+            if !motel_tel.isEqual(nil) {
+                motel_elements.setObject(motel_tel, forKey: "tel" as NSCopying)
+            }
             
             
             motel_posts.add(motel_elements)
         }
     }
+    
+    
     
     override func viewDidLoad() {
         beginParsing()
@@ -128,6 +145,30 @@ class NearMotelTableViewController: UITableViewController ,XMLParserDelegate{
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        send_title = (motel_posts.object(at:indexPath.row) as AnyObject).value(forKey:"title") as! NSString as String
+        send_addr = (motel_posts.object(at:indexPath.row) as AnyObject).value(forKey:"addr1") as! NSString as String
+        send_image = (motel_posts.object(at:indexPath.row) as AnyObject).value(forKey:"firstimage") as! NSString as String
+        send_mapx = (motel_posts.object(at:indexPath.row) as AnyObject).value(forKey:"mapx") as! NSString as String
+        send_mapy = (motel_posts.object(at:indexPath.row) as AnyObject).value(forKey:"mapy") as! NSString as String
+        send_tel = (motel_posts.object(at: indexPath.row) as AnyObject).value(forKey: "tel") as! NSString as String
+
+        self.performSegue(withIdentifier: "segueToMotelInfo", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToMotelInfo" {
+            if let motelInfo = segue.destination as? NearMotelInfomationViewController {
+                motelInfo.motel_title = send_title
+                motelInfo.motel_addr = send_addr
+                motelInfo.motel_image = send_image
+                motelInfo.motel_mapx = send_mapx
+                motelInfo.motel_mapy = send_mapy
+                motelInfo.motel_tel = send_tel
+            }
+        }
     }
 
     /*

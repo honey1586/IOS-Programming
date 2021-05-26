@@ -223,16 +223,8 @@
                                     <action selector="action_showWeather:" destination="icu-vh-IxJ" eventType="touchUpInside" id="u7U-wq-SZb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ure-e6-w1y">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QM-eX-654">
                                 <rect key="frame" x="50" y="438" width="314" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="근처 버스정류장 검색"/>
-                                <connections>
-                                    <segue destination="oWQ-9Z-Onq" kind="show" id="xDg-aY-o7u"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QM-eX-654">
-                                <rect key="frame" x="50" y="538" width="314" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="근처 숙박시설 검색"/>
                                 <connections>
@@ -243,23 +235,17 @@
                         <viewLayoutGuide key="safeArea" id="hHr-aG-kWk"/>
                         <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ure-e6-w1y" firstAttribute="centerX" secondItem="0Os-X5-I9F" secondAttribute="centerX" id="3MI-cS-DDA"/>
-                            <constraint firstItem="Ure-e6-w1y" firstAttribute="height" secondItem="al4-u8-PFy" secondAttribute="height" id="3ph-Ec-K0P"/>
                             <constraint firstItem="8Ka-3z-3mM" firstAttribute="top" secondItem="8kY-Vt-WqY" secondAttribute="bottom" constant="50" id="99j-23-e01"/>
-                            <constraint firstItem="Ure-e6-w1y" firstAttribute="leading" secondItem="hHr-aG-kWk" secondAttribute="leading" constant="50" id="Bx6-CT-i9Y"/>
                             <constraint firstItem="3QM-eX-654" firstAttribute="leading" secondItem="hHr-aG-kWk" secondAttribute="leading" constant="50" id="C5V-YW-dLM"/>
                             <constraint firstItem="al4-u8-PFy" firstAttribute="trailing" secondItem="hHr-aG-kWk" secondAttribute="trailing" constant="-50" id="CAK-0f-DLv"/>
                             <constraint firstItem="al4-u8-PFy" firstAttribute="centerX" secondItem="0Os-X5-I9F" secondAttribute="centerX" id="E7C-4Z-8px"/>
                             <constraint firstItem="3QM-eX-654" firstAttribute="height" secondItem="al4-u8-PFy" secondAttribute="height" id="FIv-xI-OHf"/>
                             <constraint firstItem="8kY-Vt-WqY" firstAttribute="leading" secondItem="hHr-aG-kWk" secondAttribute="leading" constant="50" id="Nwo-cj-C2N"/>
-                            <constraint firstItem="Ure-e6-w1y" firstAttribute="trailing" secondItem="hHr-aG-kWk" secondAttribute="trailing" constant="-50" id="OAG-oV-xQH"/>
                             <constraint firstItem="al4-u8-PFy" firstAttribute="top" secondItem="hHr-aG-kWk" secondAttribute="top" constant="50" id="Ovh-Aa-enr"/>
                             <constraint firstItem="8Ka-3z-3mM" firstAttribute="leading" secondItem="hHr-aG-kWk" secondAttribute="leading" constant="50" id="SPQ-rz-jAZ"/>
-                            <constraint firstItem="3QM-eX-654" firstAttribute="top" secondItem="Ure-e6-w1y" secondAttribute="bottom" constant="50" id="UaX-9s-FWJ"/>
                             <constraint firstItem="8kY-Vt-WqY" firstAttribute="centerX" secondItem="0Os-X5-I9F" secondAttribute="centerX" id="Ujk-Es-Fge"/>
                             <constraint firstItem="8Ka-3z-3mM" firstAttribute="centerX" secondItem="0Os-X5-I9F" secondAttribute="centerX" id="Yzb-7Q-rbX"/>
                             <constraint firstItem="3QM-eX-654" firstAttribute="trailing" secondItem="hHr-aG-kWk" secondAttribute="trailing" constant="-50" id="aof-WX-RRZ"/>
-                            <constraint firstItem="Ure-e6-w1y" firstAttribute="top" secondItem="8Ka-3z-3mM" secondAttribute="bottom" constant="50" id="f3m-H5-3gN"/>
                             <constraint firstItem="8Ka-3z-3mM" firstAttribute="trailing" secondItem="hHr-aG-kWk" secondAttribute="trailing" constant="-50" id="gRI-3t-jcd"/>
                             <constraint firstItem="8kY-Vt-WqY" firstAttribute="top" secondItem="al4-u8-PFy" secondAttribute="bottom" constant="50" id="gni-7G-I9j"/>
                             <constraint firstItem="8kY-Vt-WqY" firstAttribute="trailing" secondItem="hHr-aG-kWk" secondAttribute="trailing" constant="-50" id="iZW-bw-l55"/>
@@ -271,7 +257,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="관광지 정보" id="lAi-cT-JBL"/>
                     <connections>
-                        <outlet property="outlet_nearBusstop" destination="Ure-e6-w1y" id="fAr-KL-WC0"/>
                         <outlet property="outlet_nearMotel" destination="3QM-eX-654" id="7aB-81-nCe"/>
                         <outlet property="outlet_showInformation" destination="al4-u8-PFy" id="TAM-CC-n5p"/>
                         <outlet property="outlet_showLocation" destination="8kY-Vt-WqY" id="J4U-gu-sja"/>
@@ -382,9 +367,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="rcR-cF-bgM" kind="show" id="83R-ZR-y2o"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -395,6 +377,7 @@
                     <navigationItem key="navigationItem" title="근처 숙박시설" id="0Jm-gv-fl9"/>
                     <connections>
                         <outlet property="moteltbData" destination="4DE-ja-mrh" id="W7P-3k-AnP"/>
+                        <segue destination="rcR-cF-bgM" kind="show" identifier="segueToMotelInfo" id="4Ws-HX-cMM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTe-nT-1gC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -404,10 +387,173 @@
         <!--숙박시설 정보-->
         <scene sceneID="1ig-Wz-cwK">
             <objects>
-                <viewController id="rcR-cF-bgM" sceneMemberID="viewController">
+                <viewController id="rcR-cF-bgM" customClass="NearMotelInfomationViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nhp-as-0Px">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nKc-vY-dTh">
+                                <rect key="frame" x="0.0" y="90" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3UT-lV-NHn">
+                                        <rect key="frame" x="0.0" y="33" width="414" height="610.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWm-JE-OzN" userLabel="Name View">
+                                                <rect key="frame" x="20" y="20" width="374" height="83.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb7-DJ-tZP" userLabel="Name">
+                                                        <rect key="frame" x="20" y="10" width="334" height="23.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-sy-UkG">
+                                                        <rect key="frame" x="20" y="43.5" width="334" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="fgn-2h-Eel"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansKR-Light" family="IBM Plex Sans KR" pointSize="20"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="WLb-sy-UkG" secondAttribute="bottom" constant="10" id="3Bu-R7-Em1"/>
+                                                    <constraint firstItem="WLb-sy-UkG" firstAttribute="leading" secondItem="bWm-JE-OzN" secondAttribute="leading" constant="20" id="5XI-ib-lIF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mb7-DJ-tZP" secondAttribute="trailing" constant="20" id="5jh-hP-Xaz"/>
+                                                    <constraint firstItem="WLb-sy-UkG" firstAttribute="top" secondItem="mb7-DJ-tZP" secondAttribute="bottom" constant="10" id="Esa-9F-S7f"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WLb-sy-UkG" secondAttribute="trailing" constant="20" id="KaY-fZ-oJp"/>
+                                                    <constraint firstItem="mb7-DJ-tZP" firstAttribute="leading" secondItem="bWm-JE-OzN" secondAttribute="leading" constant="20" id="gFt-li-5iY"/>
+                                                    <constraint firstItem="mb7-DJ-tZP" firstAttribute="top" secondItem="bWm-JE-OzN" secondAttribute="top" constant="10" id="slc-ZG-dq4"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4x-q5-SNV" userLabel="Image View">
+                                                <rect key="frame" x="20" y="123.5" width="374" height="153.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소 사진" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-ht-MWC" userLabel="Name">
+                                                        <rect key="frame" x="20" y="10" width="334" height="23.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqo-mm-nUx">
+                                                        <rect key="frame" x="20" y="43.5" width="334" height="100"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="fRV-jA-uWJ"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="hqo-mm-nUx" secondAttribute="bottom" constant="10" id="9DS-6D-gpY"/>
+                                                    <constraint firstItem="PKT-ht-MWC" firstAttribute="top" secondItem="p4x-q5-SNV" secondAttribute="top" constant="10" id="9Db-69-a6N"/>
+                                                    <constraint firstItem="hqo-mm-nUx" firstAttribute="top" secondItem="PKT-ht-MWC" secondAttribute="bottom" constant="10" id="DMV-OV-kTD"/>
+                                                    <constraint firstItem="PKT-ht-MWC" firstAttribute="leading" secondItem="p4x-q5-SNV" secondAttribute="leading" constant="20" id="GUe-yv-lK7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hqo-mm-nUx" secondAttribute="trailing" constant="20" id="jgc-dd-xjy"/>
+                                                    <constraint firstItem="hqo-mm-nUx" firstAttribute="leading" secondItem="p4x-q5-SNV" secondAttribute="leading" constant="20" id="pgt-zc-LVB"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PKT-ht-MWC" secondAttribute="trailing" constant="20" id="rjc-k2-dKX"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-4t-OiF" userLabel="Address View">
+                                                <rect key="frame" x="20" y="297" width="374" height="83.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소 주소" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvS-vL-Bkv" userLabel="Name">
+                                                        <rect key="frame" x="20" y="10" width="334" height="23.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amh-Q2-z51">
+                                                        <rect key="frame" x="20" y="43.5" width="334" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="tBW-PS-WbI"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansKR-Light" family="IBM Plex Sans KR" pointSize="20"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="rvS-vL-Bkv" firstAttribute="top" secondItem="BEQ-4t-OiF" secondAttribute="top" constant="10" id="0cj-1k-j6T"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Amh-Q2-z51" secondAttribute="bottom" constant="10" id="6Um-Xw-Bsb"/>
+                                                    <constraint firstItem="rvS-vL-Bkv" firstAttribute="leading" secondItem="BEQ-4t-OiF" secondAttribute="leading" constant="20" id="TXz-9U-MrD"/>
+                                                    <constraint firstItem="Amh-Q2-z51" firstAttribute="top" secondItem="rvS-vL-Bkv" secondAttribute="bottom" constant="10" id="TsD-9h-oS5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rvS-vL-Bkv" secondAttribute="trailing" constant="20" id="sWr-pG-uDQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Amh-Q2-z51" secondAttribute="trailing" constant="20" id="xWo-gD-mVY"/>
+                                                    <constraint firstItem="Amh-Q2-z51" firstAttribute="leading" secondItem="BEQ-4t-OiF" secondAttribute="leading" constant="20" id="xxd-Ag-Gek"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFp-oD-5zT" userLabel="Tel View">
+                                                <rect key="frame" x="20" y="400.5" width="374" height="83.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소 전화번호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRj-Hu-p8K" userLabel="Name">
+                                                        <rect key="frame" x="20" y="10" width="334" height="23.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJn-2o-q8H">
+                                                        <rect key="frame" x="20" y="43.5" width="334" height="30"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Jf5-71-CkW"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="IBMPlexSansKR-Light" family="IBM Plex Sans KR" pointSize="20"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="uRj-Hu-p8K" secondAttribute="trailing" constant="20" id="3fT-Gl-OeF"/>
+                                                    <constraint firstItem="mJn-2o-q8H" firstAttribute="leading" secondItem="DFp-oD-5zT" secondAttribute="leading" constant="20" id="4A5-Hd-lIg"/>
+                                                    <constraint firstItem="uRj-Hu-p8K" firstAttribute="top" secondItem="DFp-oD-5zT" secondAttribute="top" constant="10" id="AhQ-De-9jd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="mJn-2o-q8H" secondAttribute="bottom" constant="10" id="IaA-9S-pnD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mJn-2o-q8H" secondAttribute="trailing" constant="20" id="TdI-HO-S41"/>
+                                                    <constraint firstItem="uRj-Hu-p8K" firstAttribute="leading" secondItem="DFp-oD-5zT" secondAttribute="leading" constant="20" id="eSB-vt-0Hh"/>
+                                                    <constraint firstItem="mJn-2o-q8H" firstAttribute="top" secondItem="uRj-Hu-p8K" secondAttribute="bottom" constant="10" id="f55-OR-osD"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="BEQ-4t-OiF" secondAttribute="trailing" constant="20" id="82c-Mf-h9F"/>
+                                            <constraint firstItem="bWm-JE-OzN" firstAttribute="top" secondItem="3UT-lV-NHn" secondAttribute="top" constant="20" id="FJ6-dg-pCi"/>
+                                            <constraint firstItem="p4x-q5-SNV" firstAttribute="top" secondItem="bWm-JE-OzN" secondAttribute="bottom" constant="20" id="Fpd-x3-KyN"/>
+                                            <constraint firstItem="BEQ-4t-OiF" firstAttribute="top" secondItem="p4x-q5-SNV" secondAttribute="bottom" constant="20" id="Geb-S3-b4u"/>
+                                            <constraint firstItem="p4x-q5-SNV" firstAttribute="leading" secondItem="3UT-lV-NHn" secondAttribute="leading" constant="20" id="Nue-6s-BfI"/>
+                                            <constraint firstAttribute="trailing" secondItem="DFp-oD-5zT" secondAttribute="trailing" constant="20" id="PO2-2F-e5y"/>
+                                            <constraint firstAttribute="trailing" secondItem="bWm-JE-OzN" secondAttribute="trailing" constant="20" id="Y51-fV-qbj"/>
+                                            <constraint firstAttribute="trailing" secondItem="p4x-q5-SNV" secondAttribute="trailing" constant="20" id="ai3-3a-pln"/>
+                                            <constraint firstItem="bWm-JE-OzN" firstAttribute="leading" secondItem="3UT-lV-NHn" secondAttribute="leading" constant="20" id="usN-ED-GUM"/>
+                                            <constraint firstItem="DFp-oD-5zT" firstAttribute="leading" secondItem="3UT-lV-NHn" secondAttribute="leading" constant="20" id="uzt-Jq-dT1"/>
+                                            <constraint firstItem="BEQ-4t-OiF" firstAttribute="leading" secondItem="3UT-lV-NHn" secondAttribute="leading" constant="20" id="ybv-UQ-U0h"/>
+                                            <constraint firstItem="DFp-oD-5zT" firstAttribute="top" secondItem="BEQ-4t-OiF" secondAttribute="bottom" constant="20" id="yvo-Xy-qx2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aj3-XB-nA1" firstAttribute="bottom" secondItem="3UT-lV-NHn" secondAttribute="bottom" id="37N-uI-x7U"/>
+                                    <constraint firstItem="3UT-lV-NHn" firstAttribute="width" secondItem="6gQ-T6-EXi" secondAttribute="width" id="FDb-pQ-9Lg"/>
+                                    <constraint firstItem="3UT-lV-NHn" firstAttribute="leading" secondItem="aj3-XB-nA1" secondAttribute="leading" id="MoM-Nl-vcl"/>
+                                    <constraint firstItem="aj3-XB-nA1" firstAttribute="trailing" secondItem="3UT-lV-NHn" secondAttribute="trailing" id="YEJ-O2-agX"/>
+                                    <constraint firstItem="3UT-lV-NHn" firstAttribute="top" secondItem="aj3-XB-nA1" secondAttribute="top" id="lBB-1k-hMb"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="aj3-XB-nA1"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="6gQ-T6-EXi"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="krn-3C-x9q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -419,11 +565,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="위치 보기"/>
                                 <connections>
-                                    <segue destination="jdE-ed-Fns" kind="show" id="Jne-9b-YLA"/>
+                                    <segue destination="jdE-ed-Fns" kind="show" identifier="segueToMotelLocation" id="Jne-9b-YLA"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressView" destination="BEQ-4t-OiF" id="cXt-9N-tAR"/>
+                        <outlet property="imageView" destination="p4x-q5-SNV" id="qPy-fY-pEy"/>
+                        <outlet property="imageViewHeightConstraint" destination="fRV-jA-uWJ" id="pdp-c8-Ekc"/>
+                        <outlet property="nameView" destination="bWm-JE-OzN" id="uGn-5z-Maf"/>
+                        <outlet property="outlet_addr" destination="Amh-Q2-z51" id="tvi-H9-vwO"/>
+                        <outlet property="outlet_image" destination="hqo-mm-nUx" id="Gao-xJ-5ma"/>
+                        <outlet property="outlet_name" destination="WLb-sy-UkG" id="59K-kM-tPP"/>
+                        <outlet property="outlet_tel" destination="mJn-2o-q8H" id="m1y-mQ-CIH"/>
+                        <outlet property="telView" destination="DFp-oD-5zT" id="xXf-1G-EI8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjZ-R9-VAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -456,26 +613,10 @@
             </objects>
             <point key="canvasLocation" x="847.82608695652175" y="811.60714285714278"/>
         </scene>
-        <!--근처 버스정류장 검색-->
-        <scene sceneID="Mua-gS-Gea">
-            <objects>
-                <viewController id="oWQ-9Z-Onq" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QMC-En-m4K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="wg5-g5-CfF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="근처 버스정류장 검색" id="Wxs-wh-C4p"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CO7-nW-IH3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2643" y="812"/>
-        </scene>
         <!--위치 보기-->
         <scene sceneID="HTk-73-UgO">
             <objects>
-                <viewController id="jdE-ed-Fns" sceneMemberID="viewController">
+                <viewController id="jdE-ed-Fns" customClass="MotelInfoLocation" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YDO-Vd-lRY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -494,6 +635,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="위치 보기" id="qcd-kQ-P45"/>
+                    <connections>
+                        <outlet property="outlet_mapView" destination="5C1-cm-659" id="ND6-tx-vAI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLp-Pm-5zw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
