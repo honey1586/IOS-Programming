@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewDataSource{
+class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewDataSource , CLLocationManagerDelegate , XMLParserDelegate{
     var result: Result?
     
     var selectSido: String = "서울" // 디폴트
@@ -19,16 +20,70 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         
     var url : String = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/areaBasedList?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=50&pageNo=1&MobileApp=TourAPI3.0_Guide&MobileOS=ETC&arrange=A&cat1=&contentTypeId=&areaCode="
     
+    
+    /// 근처 관광지 찾기 변수
+    var nearTour_url : String = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=5&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=B&contentTypeId=12&radius=1000&listYN=Y&mapX=126.981611&mapY=37.568477"
+    var myLatitude: Double?
+    var myLongitude : Double?
+    var locationManager:CLLocationManager!
+    
+    var parser = XMLParser()
+    var posts = NSMutableArray()
+    
+    var elements = NSMutableDictionary()
+    var element = NSString()
+    
+    var title1 = NSMutableString()
+    var image = NSMutableString()
+    
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var outlet_seartchView: UIView!
     @IBOutlet weak var outlet_searchButton: UIButton!
     
+    @IBOutlet weak var nearView: UIView!
+    @IBOutlet weak var nearStackView: UIStackView!
+    @IBOutlet weak var recommendView: UIView!
+    @IBOutlet weak var recommendStackView: UIStackView!
+    
+    private func beginParsing()
+    {
+        posts = []
+        parser = XMLParser(contentsOf: (URL(string:nearTour_url))!)!
+        parser.delegate = self
+        parser.parse()
+    }
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String? , qualifiedName qName: String? , attributes attributeDict: [String : String])
+    {
+        element = elementName as NSString
+        if(elementName as NSString).isEqual(to: "item")
+        {
+            elements = NSMutableDictionary()
+            elements = [:]
+            title1 = NSMutableString()
+            title1 = ""
+            addr1 = NSMutableString()
+            addr1 = ""
+            contentid = NSMutableString()
+            contentid = ""
+        }
+    }
     
     var motel_urlString = " http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchStay?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&listYN=Y"
+    
+    func getMyLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
         
-    
-    
-    
+        locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        locationManager.startUpdatingLocation()
+        
+        let coor = locationManager.location?.coordinate
+        myLatitude = coor?.latitude
+        myLongitude = coor?.longitude
+    }
     
     @IBAction func doneToPickerViewController(segue:UIStoryboardSegue){
     }
@@ -120,6 +175,8 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         parseJson()
+        getMyLocation()
+        
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -136,7 +193,26 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
             searchView.layer.shadowRadius = 4
             searchView.layer.shadowOpacity = 0.2
         }
+        if let tempNearView = nearView {
+            tempNearView.layer.cornerRadius = 25
+            tempNearView.layer.shadowColor = UIColor.black.cgColor
+            tempNearView.layer.shadowOffset = CGSize(width: 0, height: 0)
+            tempNearView.layer.shadowRadius = 4
+            tempNearView.layer.shadowOpacity = 0.2
+        }
+        if let tempRecommendView = recommendView {
+            tempRecommendView.layer.cornerRadius = 25
+            tempRecommendView.layer.shadowColor = UIColor.black.cgColor
+            tempRecommendView.layer.shadowOffset = CGSize(width: 0, height: 0)
+            tempRecommendView.layer.shadowRadius = 4
+            tempRecommendView.layer.shadowOpacity = 0.2
+        }
     }
+    
+    
+    
+    
+    //func addView(scrollView: UIScrollView, )
     
     
     
