@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ex-2H-22i">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ex-2H-22i">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,27 +22,27 @@
             <objects>
                 <viewController id="CAt-by-KER" customClass="ViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCT-Zf-gt7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Gf-BN-kaa">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Gf-BN-kaa">
+                                <rect key="frame" x="0.0" y="88" width="390" height="774"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpW-qJ-fVn">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="706"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpW-qJ-fVn">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="706"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgM-Wh-t2p" userLabel="Search View">
-                                                <rect key="frame" x="10" y="10" width="394" height="326"/>
+                                                <rect key="frame" x="10" y="10" width="370" height="326"/>
                                                 <subviews>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PdW-hI-AsZ" userLabel="Do Picker View">
-                                                        <rect key="frame" x="20" y="20" width="354" height="216"/>
+                                                        <rect key="frame" x="20" y="20" width="330" height="216"/>
                                                         <connections>
                                                             <outlet property="dataSource" destination="CAt-by-KER" id="0Fl-j5-L1V"/>
                                                             <outlet property="delegate" destination="CAt-by-KER" id="ve1-8P-Lsg"/>
                                                         </connections>
                                                     </pickerView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ4-ft-2Gf">
-                                                        <rect key="frame" x="20" y="256" width="354" height="50"/>
+                                                        <rect key="frame" x="20" y="256" width="330" height="50"/>
                                                         <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="dF4-jb-XkN"/>
@@ -68,30 +68,86 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-ps-8Mp" userLabel="Near View">
-                                                <rect key="frame" x="10" y="346" width="394" height="170"/>
+                                                <rect key="frame" x="10" y="346" width="370" height="170"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 주변 추천 관광지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1B-1Z-Vxh">
-                                                        <rect key="frame" x="10" y="10" width="374" height="30"/>
+                                                        <rect key="frame" x="10" y="10.000000000000002" width="350" height="23.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNX-Ux-Kbe" userLabel="near Scroll View">
-                                                        <rect key="frame" x="0.0" y="10" width="240" height="150"/>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNX-Ux-Kbe" userLabel="near Scroll View">
+                                                        <rect key="frame" x="10" y="10" width="350" height="150"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bdh-k4-TSJ">
+                                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bdh-k4-TSJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ica-7t-4di">
-                                                                        <rect key="frame" x="87" y="0.0" width="240" height="150"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ica-7t-4di">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="150"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="150" id="PPr-8g-FTk"/>
                                                                         </constraints>
                                                                     </stackView>
+                                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sl0-0I-Uns" userLabel="Recommend View">
+                                                                        <rect key="frame" x="45" y="158" width="394" height="170"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천 관광지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvf-Sl-ld6">
+                                                                                <rect key="frame" x="10" y="10.000000000000002" width="92.666666666666671" height="23.666666666666671"/>
+                                                                                <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vus-4Q-05F" userLabel="recommend Scroll View">
+                                                                                <rect key="frame" x="0.0" y="10" width="240" height="150"/>
+                                                                                <subviews>
+                                                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3d-bc-sRF">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                                                                        <subviews>
+                                                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ioB-uf-iNc">
+                                                                                                <rect key="frame" x="87" y="0.0" width="240" height="150"/>
+                                                                                                <constraints>
+                                                                                                    <constraint firstAttribute="height" constant="150" id="KgR-d5-rvD"/>
+                                                                                                </constraints>
+                                                                                            </stackView>
+                                                                                        </subviews>
+                                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="trailing" secondItem="ioB-uf-iNc" secondAttribute="trailing" id="55s-FP-Xav"/>
+                                                                                            <constraint firstItem="ioB-uf-iNc" firstAttribute="leading" secondItem="R3d-bc-sRF" secondAttribute="leading" id="C0A-mi-4eW"/>
+                                                                                            <constraint firstItem="ioB-uf-iNc" firstAttribute="top" secondItem="R3d-bc-sRF" secondAttribute="top" id="Ptj-gc-zer"/>
+                                                                                            <constraint firstAttribute="bottom" secondItem="ioB-uf-iNc" secondAttribute="bottom" id="Uif-X3-dem"/>
+                                                                                        </constraints>
+                                                                                    </view>
+                                                                                </subviews>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="5xW-7a-eNS" firstAttribute="bottom" secondItem="R3d-bc-sRF" secondAttribute="bottom" id="Wan-XX-xhR"/>
+                                                                                    <constraint firstItem="R3d-bc-sRF" firstAttribute="leading" secondItem="5xW-7a-eNS" secondAttribute="leading" id="YkG-yJ-vK4"/>
+                                                                                    <constraint firstItem="R3d-bc-sRF" firstAttribute="height" secondItem="Nlh-NE-7ve" secondAttribute="height" id="aAF-Xt-W8b"/>
+                                                                                    <constraint firstItem="5xW-7a-eNS" firstAttribute="trailing" secondItem="R3d-bc-sRF" secondAttribute="trailing" id="jcM-dV-V65"/>
+                                                                                    <constraint firstItem="R3d-bc-sRF" firstAttribute="top" secondItem="5xW-7a-eNS" secondAttribute="top" id="t1M-VE-ZHz"/>
+                                                                                </constraints>
+                                                                                <viewLayoutGuide key="contentLayoutGuide" id="5xW-7a-eNS"/>
+                                                                                <viewLayoutGuide key="frameLayoutGuide" id="Nlh-NE-7ve"/>
+                                                                            </scrollView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="hvf-Sl-ld6" firstAttribute="trailing" secondItem="sl0-0I-Uns" secondAttribute="trailing" constant="-10" id="5oA-pQ-8cD"/>
+                                                                            <constraint firstItem="vus-4Q-05F" firstAttribute="top" secondItem="sl0-0I-Uns" secondAttribute="top" constant="10" id="EXl-LG-LwT"/>
+                                                                            <constraint firstItem="vus-4Q-05F" firstAttribute="leading" secondItem="sl0-0I-Uns" secondAttribute="leading" constant="10" id="KLb-Ca-KTv"/>
+                                                                            <constraint firstItem="hvf-Sl-ld6" firstAttribute="top" secondItem="sl0-0I-Uns" secondAttribute="top" constant="10" id="WDc-by-NhG"/>
+                                                                            <constraint firstItem="vus-4Q-05F" firstAttribute="bottom" secondItem="sl0-0I-Uns" secondAttribute="bottom" constant="-10" id="dig-Gk-wZ7"/>
+                                                                            <constraint firstItem="vus-4Q-05F" firstAttribute="trailing" secondItem="sl0-0I-Uns" secondAttribute="trailing" constant="-10" id="kRr-o5-9vF"/>
+                                                                            <constraint firstItem="hvf-Sl-ld6" firstAttribute="leading" secondItem="sl0-0I-Uns" secondAttribute="leading" constant="10" id="kXG-dt-6o0"/>
+                                                                        </constraints>
+                                                                    </view>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="ica-7t-4di" secondAttribute="bottom" id="5WR-8p-doX"/>
+                                                                    <constraint firstItem="sl0-0I-Uns" firstAttribute="leading" secondItem="Bdh-k4-TSJ" secondAttribute="leading" constant="45" id="89e-BM-R8S"/>
+                                                                    <constraint firstItem="sl0-0I-Uns" firstAttribute="trailing" secondItem="Bdh-k4-TSJ" secondAttribute="trailing" constant="65" id="VHi-Ng-zuv"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="sl0-0I-Uns" secondAttribute="bottom" constant="-178" id="XYg-8U-Qca"/>
                                                                     <constraint firstItem="ica-7t-4di" firstAttribute="top" secondItem="Bdh-k4-TSJ" secondAttribute="top" id="es2-Ts-KYQ"/>
                                                                     <constraint firstAttribute="trailing" secondItem="ica-7t-4di" secondAttribute="trailing" id="h2s-Kf-TBE"/>
                                                                     <constraint firstItem="ica-7t-4di" firstAttribute="leading" secondItem="Bdh-k4-TSJ" secondAttribute="leading" id="uE7-Rj-dKh"/>
@@ -120,72 +176,15 @@
                                                     <constraint firstItem="e1B-1Z-Vxh" firstAttribute="leading" secondItem="nHg-ps-8Mp" secondAttribute="leading" constant="10" id="vLL-md-AYu"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sl0-0I-Uns" userLabel="Recommend View">
-                                                <rect key="frame" x="10" y="526" width="394" height="170"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천 관광지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvf-Sl-ld6">
-                                                        <rect key="frame" x="10" y="10" width="374" height="30"/>
-                                                        <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vus-4Q-05F" userLabel="recommend Scroll View">
-                                                        <rect key="frame" x="0.0" y="10" width="240" height="150"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3d-bc-sRF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
-                                                                <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ioB-uf-iNc">
-                                                                        <rect key="frame" x="87" y="0.0" width="240" height="150"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="150" id="KgR-d5-rvD"/>
-                                                                        </constraints>
-                                                                    </stackView>
-                                                                </subviews>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="trailing" secondItem="ioB-uf-iNc" secondAttribute="trailing" id="55s-FP-Xav"/>
-                                                                    <constraint firstItem="ioB-uf-iNc" firstAttribute="leading" secondItem="R3d-bc-sRF" secondAttribute="leading" id="C0A-mi-4eW"/>
-                                                                    <constraint firstItem="ioB-uf-iNc" firstAttribute="top" secondItem="R3d-bc-sRF" secondAttribute="top" id="Ptj-gc-zer"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="ioB-uf-iNc" secondAttribute="bottom" id="Uif-X3-dem"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="5xW-7a-eNS" firstAttribute="bottom" secondItem="R3d-bc-sRF" secondAttribute="bottom" id="Wan-XX-xhR"/>
-                                                            <constraint firstItem="R3d-bc-sRF" firstAttribute="leading" secondItem="5xW-7a-eNS" secondAttribute="leading" id="YkG-yJ-vK4"/>
-                                                            <constraint firstItem="R3d-bc-sRF" firstAttribute="height" secondItem="Nlh-NE-7ve" secondAttribute="height" id="aAF-Xt-W8b"/>
-                                                            <constraint firstItem="5xW-7a-eNS" firstAttribute="trailing" secondItem="R3d-bc-sRF" secondAttribute="trailing" id="jcM-dV-V65"/>
-                                                            <constraint firstItem="R3d-bc-sRF" firstAttribute="top" secondItem="5xW-7a-eNS" secondAttribute="top" id="t1M-VE-ZHz"/>
-                                                        </constraints>
-                                                        <viewLayoutGuide key="contentLayoutGuide" id="5xW-7a-eNS"/>
-                                                        <viewLayoutGuide key="frameLayoutGuide" id="Nlh-NE-7ve"/>
-                                                    </scrollView>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="hvf-Sl-ld6" firstAttribute="trailing" secondItem="sl0-0I-Uns" secondAttribute="trailing" constant="-10" id="5oA-pQ-8cD"/>
-                                                    <constraint firstItem="vus-4Q-05F" firstAttribute="top" secondItem="sl0-0I-Uns" secondAttribute="top" constant="10" id="EXl-LG-LwT"/>
-                                                    <constraint firstItem="vus-4Q-05F" firstAttribute="leading" secondItem="sl0-0I-Uns" secondAttribute="leading" constant="10" id="KLb-Ca-KTv"/>
-                                                    <constraint firstItem="hvf-Sl-ld6" firstAttribute="top" secondItem="sl0-0I-Uns" secondAttribute="top" constant="10" id="WDc-by-NhG"/>
-                                                    <constraint firstItem="vus-4Q-05F" firstAttribute="bottom" secondItem="sl0-0I-Uns" secondAttribute="bottom" constant="-10" id="dig-Gk-wZ7"/>
-                                                    <constraint firstItem="vus-4Q-05F" firstAttribute="trailing" secondItem="sl0-0I-Uns" secondAttribute="trailing" constant="-10" id="kRr-o5-9vF"/>
-                                                    <constraint firstItem="hvf-Sl-ld6" firstAttribute="leading" secondItem="sl0-0I-Uns" secondAttribute="leading" constant="10" id="kXG-dt-6o0"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="nHg-ps-8Mp" firstAttribute="leading" secondItem="bpW-qJ-fVn" secondAttribute="leading" constant="10" id="8hV-or-MFh"/>
-                                            <constraint firstItem="sl0-0I-Uns" firstAttribute="top" secondItem="nHg-ps-8Mp" secondAttribute="bottom" constant="10" id="9vq-6x-Ncj"/>
-                                            <constraint firstItem="sl0-0I-Uns" firstAttribute="leading" secondItem="bpW-qJ-fVn" secondAttribute="leading" constant="10" id="Atn-3j-lVt"/>
                                             <constraint firstItem="TgM-Wh-t2p" firstAttribute="top" secondItem="bpW-qJ-fVn" secondAttribute="top" constant="10" id="BGH-Ms-a9d"/>
-                                            <constraint firstAttribute="bottom" secondItem="sl0-0I-Uns" secondAttribute="bottom" constant="10" id="GFH-fJ-w9Q"/>
                                             <constraint firstItem="TgM-Wh-t2p" firstAttribute="trailing" secondItem="bpW-qJ-fVn" secondAttribute="trailing" constant="-10" id="IEc-ni-i0K"/>
                                             <constraint firstItem="nHg-ps-8Mp" firstAttribute="top" secondItem="TgM-Wh-t2p" secondAttribute="bottom" constant="10" id="RFn-n0-W6X"/>
                                             <constraint firstItem="TgM-Wh-t2p" firstAttribute="leading" secondItem="bpW-qJ-fVn" secondAttribute="leading" constant="10" id="SRT-91-fi5"/>
                                             <constraint firstItem="nHg-ps-8Mp" firstAttribute="trailing" secondItem="bpW-qJ-fVn" secondAttribute="trailing" constant="-10" id="lNn-wh-GYZ"/>
-                                            <constraint firstItem="sl0-0I-Uns" firstAttribute="trailing" secondItem="bpW-qJ-fVn" secondAttribute="trailing" constant="-10" id="mYC-lw-Ly3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -229,23 +228,23 @@
             <objects>
                 <tableViewController id="4C2-xP-lhe" customClass="TourlistTableViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7fc-Xy-Jaa" userLabel="Tb Data">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="K9u-T0-xUp" customClass="TourlistTableViewCell" customModule="IOSProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="71"/>
+                                <rect key="frame" x="0.0" y="28" width="390" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9u-T0-xUp" id="qBh-Qu-gcK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="71"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sxr-oC-h23">
-                                            <rect key="frame" x="10" y="5" width="394" height="61"/>
+                                            <rect key="frame" x="10" y="5" width="370" height="61"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26D-XR-wXM" userLabel="Name Label">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="30"/>
+                                                    <rect key="frame" x="20" y="0.0" width="350" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="ryw-xa-VXQ"/>
                                                     </constraints>
@@ -254,14 +253,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tf8-gc-E2i" userLabel="line">
-                                                    <rect key="frame" x="20" y="30" width="354" height="1"/>
+                                                    <rect key="frame" x="20" y="30" width="330" height="1"/>
                                                     <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="v18-lD-ci8"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgb-Sh-vAi" userLabel="Address Label">
-                                                    <rect key="frame" x="20" y="31" width="374" height="30"/>
+                                                    <rect key="frame" x="20" y="31" width="350" height="30"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexSansKR-Text" family="IBM Plex Sans KR" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -325,11 +324,11 @@
             <objects>
                 <viewController id="icu-vh-IxJ" customClass="TourInfosViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Os-X5-I9F">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al4-u8-PFy">
-                                <rect key="frame" x="50" y="138" width="314" height="50"/>
+                                <rect key="frame" x="50" y="138" width="290" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="zEY-c5-f52"/>
                                 </constraints>
@@ -340,7 +339,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kY-Vt-WqY">
-                                <rect key="frame" x="50" y="238" width="314" height="50"/>
+                                <rect key="frame" x="50" y="238" width="290" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="관광지 위치 보기"/>
                                 <connections>
@@ -348,7 +347,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ka-3z-3mM">
-                                <rect key="frame" x="50" y="338" width="314" height="50"/>
+                                <rect key="frame" x="50" y="338" width="290" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="관광지 날씨"/>
                                 <connections>
@@ -356,7 +355,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QM-eX-654">
-                                <rect key="frame" x="50" y="438" width="314" height="50"/>
+                                <rect key="frame" x="50" y="438" width="290" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="근처 숙박시설 검색"/>
                                 <connections>
@@ -409,11 +408,11 @@
             <objects>
                 <viewController id="R4h-qL-rud" customClass="TourInfoLocation" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kBD-JT-aQF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zvv-9E-fTE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6r4-jE-Kgw"/>
@@ -440,7 +439,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ex-2H-22i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="leQ-Jg-ddy">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -457,7 +456,7 @@
             <objects>
                 <viewController id="FzZ-80-Toa" customClass="TourWeatherViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fw8-Sz-Uwp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="kgy-0V-uJV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -473,26 +472,26 @@
             <objects>
                 <tableViewController id="Rby-Sk-PIJ" customClass="NearMotelTableViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Motel Tb Data" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4DE-ja-mrh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="uEd-6M-yZ2" detailTextLabel="Vk2-kg-pvo" style="IBUITableViewCellStyleSubtitle" id="Veg-fb-KLa">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="55.5"/>
+                                <rect key="frame" x="0.0" y="28" width="390" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Veg-fb-KLa" id="iFM-Nt-V5a">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="55.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uEd-6M-yZ2">
-                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                            <rect key="frame" x="20" y="8.9999999999999982" width="33" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vk2-kg-pvo">
-                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
@@ -522,27 +521,27 @@
             <objects>
                 <viewController id="rcR-cF-bgM" customClass="NearMotelInfomationViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nhp-as-0Px">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nKc-vY-dTh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3UT-lV-NHn">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="530"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="504"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWm-JE-OzN" userLabel="Name View">
-                                                <rect key="frame" x="20" y="20" width="374" height="90"/>
+                                                <rect key="frame" x="20" y="20" width="350" height="83.666666666666671"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb7-DJ-tZP" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="10.000000000000002" width="310" height="23.666666666666671"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-sy-UkG">
-                                                        <rect key="frame" x="20" y="50" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="43.666666666666657" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="fgn-2h-Eel"/>
@@ -564,17 +563,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4x-q5-SNV" userLabel="Image View">
-                                                <rect key="frame" x="20" y="130" width="374" height="160"/>
+                                                <rect key="frame" x="20" y="123.66666666666664" width="350" height="153.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소 사진" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-ht-MWC" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqo-mm-nUx">
-                                                        <rect key="frame" x="20" y="50" width="334" height="100"/>
+                                                        <rect key="frame" x="20" y="43.333333333333343" width="310" height="100"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="fRV-jA-uWJ"/>
@@ -593,17 +592,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-4t-OiF" userLabel="Address View">
-                                                <rect key="frame" x="20" y="310" width="374" height="90"/>
+                                                <rect key="frame" x="20" y="297" width="350" height="83.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소 주소" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvS-vL-Bkv" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="10.000000000000002" width="310" height="23.666666666666671"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amh-Q2-z51">
-                                                        <rect key="frame" x="20" y="50" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="43.666666666666686" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="tBW-PS-WbI"/>
@@ -625,17 +624,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFp-oD-5zT" userLabel="Tel View">
-                                                <rect key="frame" x="20" y="420" width="374" height="90"/>
+                                                <rect key="frame" x="20" y="400.66666666666669" width="350" height="83.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소 전화번호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRj-Hu-p8K" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJn-2o-q8H">
-                                                        <rect key="frame" x="20" y="50" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="43.333333333333314" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="Jf5-71-CkW"/>
@@ -699,7 +698,7 @@
                     <navigationItem key="navigationItem" title="숙박시설 정보" id="uLS-CH-O0I">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="6KM-iQ-V0G">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Jpj-I5-i4i">
-                                <rect key="frame" x="319" y="4" width="75" height="36"/>
+                                <rect key="frame" x="299" y="4" width="75" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="위치 보기"/>
@@ -730,7 +729,7 @@
             <objects>
                 <viewController id="oeZ-bx-VUw" customClass="NearTourSearchViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rk5-TM-lCy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYB-4E-vU0">
@@ -757,11 +756,11 @@
             <objects>
                 <viewController id="jdE-ed-Fns" customClass="MotelInfoLocation" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YDO-Vd-lRY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5C1-cm-659">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fnr-ha-Wpm"/>
@@ -787,27 +786,27 @@
             <objects>
                 <viewController id="jBd-Ng-x9S" customClass="TourInformationViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2fU-nb-Obv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXC-QJ-6XT">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCA-bA-sKL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="643"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="610.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4F-IZ-1wK" userLabel="Name View">
-                                                <rect key="frame" x="20" y="20" width="374" height="90"/>
+                                                <rect key="frame" x="20" y="20" width="350" height="83.666666666666671"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mb-PJ-Nmz" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="10.000000000000002" width="310" height="23.666666666666671"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf7-Oh-pXn">
-                                                        <rect key="frame" x="20" y="50" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="43.666666666666657" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="bgz-my-3mc"/>
@@ -829,17 +828,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-Os-z40" userLabel="Image View">
-                                                <rect key="frame" x="20" y="130" width="374" height="160"/>
+                                                <rect key="frame" x="20" y="123.66666666666664" width="350" height="153.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 사진" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oy-kq-3s3" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QF7-dP-Psv">
-                                                        <rect key="frame" x="20" y="50" width="334" height="100"/>
+                                                        <rect key="frame" x="20" y="43.333333333333343" width="310" height="100"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="PGj-eu-T9I"/>
@@ -858,17 +857,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ws6-yy-3L2" userLabel="Address View">
-                                                <rect key="frame" x="20" y="310" width="374" height="90"/>
+                                                <rect key="frame" x="20" y="297" width="350" height="83.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 주소" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrQ-mO-5KP" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="10.000000000000002" width="310" height="23.666666666666671"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YV5-Se-aoO">
-                                                        <rect key="frame" x="20" y="50" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="43.666666666666686" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="UCg-YG-Jtc"/>
@@ -890,17 +889,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVA-II-CsA" userLabel="Tel View">
-                                                <rect key="frame" x="20" y="420" width="374" height="90"/>
+                                                <rect key="frame" x="20" y="400.66666666666669" width="350" height="83.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 전화번호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK1-Rd-oFl" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-yj-dQi">
-                                                        <rect key="frame" x="20" y="50" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="43.333333333333314" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="JAu-38-nly"/>
@@ -922,17 +921,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLv-xJ-orT" userLabel="Overview View">
-                                                <rect key="frame" x="20" y="530" width="374" height="93"/>
+                                                <rect key="frame" x="20" y="504.00000000000006" width="350" height="86.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 설명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTc-gh-xPH" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="334" height="30"/>
+                                                        <rect key="frame" x="20" y="10.000000000000002" width="310" height="23.666666666666671"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="CGz-Oq-ftq">
-                                                        <rect key="frame" x="20" y="50" width="334" height="33"/>
+                                                        <rect key="frame" x="20" y="43.666666666666629" width="310" height="33"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

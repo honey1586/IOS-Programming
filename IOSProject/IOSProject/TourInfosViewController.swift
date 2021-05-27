@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TourInfosViewController: ViewController,XMLParserDelegate {
+class TourInfosViewController: UIViewController , XMLParserDelegate {
     @IBOutlet weak var outlet_showInformation: UIButton!
     @IBOutlet weak var outlet_showLocation: UIButton!
     @IBOutlet weak var outlet_showWeather: UIButton!

@@ -27,14 +27,16 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     var myLongitude : Double?
     var locationManager:CLLocationManager!
     
-    var parser = XMLParser()
-    var posts = NSMutableArray()
+    var nearTour_parser = XMLParser()
+    var nearTour_posts = NSMutableArray()
     
-    var elements = NSMutableDictionary()
-    var element = NSString()
+    var nearTour_elements = NSMutableDictionary()
+    var nearTour_element = NSString()
     
-    var title1 = NSMutableString()
-    var image = NSMutableString()
+    var nearTour_title1 = NSMutableString()
+    var nearTour_image = NSMutableString()
+    
+    var nearTour_contentid = NSMutableString()
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var outlet_seartchView: UIView!
@@ -45,26 +47,54 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     @IBOutlet weak var recommendView: UIView!
     @IBOutlet weak var recommendStackView: UIStackView!
     
+    var randomsido : [String] = []
+    
     private func beginParsing()
     {
-        posts = []
-        parser = XMLParser(contentsOf: (URL(string:nearTour_url))!)!
-        parser.delegate = self
-        parser.parse()
+        nearTour_posts = []
+        nearTour_parser = XMLParser(contentsOf: (URL(string:nearTour_url))!)!
+        nearTour_parser.delegate = self
+        nearTour_parser.parse()
     }
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String? , qualifiedName qName: String? , attributes attributeDict: [String : String])
     {
-        element = elementName as NSString
+        nearTour_element = elementName as NSString
         if(elementName as NSString).isEqual(to: "item")
         {
-            elements = NSMutableDictionary()
-            elements = [:]
-            title1 = NSMutableString()
-            title1 = ""
-            addr1 = NSMutableString()
-            addr1 = ""
-            contentid = NSMutableString()
-            contentid = ""
+            nearTour_elements = NSMutableDictionary()
+            nearTour_elements = [:]
+            nearTour_title1 = NSMutableString()
+            nearTour_title1 = ""
+            nearTour_contentid = NSMutableString()
+            nearTour_contentid = ""
+        }
+    }
+    func parser(_ parser: XMLParser , foundCharacters string: String)
+    {
+        if nearTour_element.isEqual(to: "title"){
+            nearTour_title1.append(string)
+        } else if nearTour_element.isEqual(to: "firstimage"){
+            nearTour_image.append(string)
+        } else if nearTour_element.isEqual(to: "contentid") {
+            nearTour_contentid.append(string)
+        }
+        
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String? , qualifiedName qName: String?)
+    {
+        if(elementName as NSString).isEqual(to: "item"){
+            if !nearTour_title1.isEqual(nil){
+                nearTour_elements.setObject(nearTour_title1, forKey: "title" as NSCopying)
+            }
+            if !nearTour_image.isEqual(nil){
+                nearTour_elements.setObject(nearTour_image, forKey: "firstimage" as NSCopying)
+            }
+            if !nearTour_contentid.isEqual(nil){
+                nearTour_elements.setObject(nearTour_contentid, forKey: "contentid" as NSCopying)
+            }
+            
+            nearTour_posts.add(nearTour_elements)
         }
     }
     
@@ -99,6 +129,8 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         label.font = UIFont(name: "IBMPlexSansKR-Light", size: 20)
         if component == 0 {
             label.text = result!.data[row].title
+            randomsido.append(result!.data[row].title)
+            
         }
         else {
             let selectedSido = pickerView.selectedRow(inComponent: 0)
@@ -176,8 +208,8 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         super.viewDidLoad()
         parseJson()
         getMyLocation()
-        
-        
+        beginParsing()
+   
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
