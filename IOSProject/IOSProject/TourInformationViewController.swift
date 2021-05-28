@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TourInformationViewController: ViewController {
+class TourInformationViewController: UIViewController {
     @IBOutlet weak var outlet_name: UILabel!
     @IBOutlet weak var outlet_image: UIImageView!
     @IBOutlet weak var outlet_address: UILabel!
@@ -48,8 +48,8 @@ class TourInformationViewController: ViewController {
         let newHeight: CGFloat = imageRatio * outlet_image.bounds.width
         imageViewHeightConstraint.constant = newHeight
         
-        //outlet_image.layer.masksToBounds = true
-        //outlet_image.layer.cornerRadius = 30
+        outlet_image.layer.masksToBounds = true
+        outlet_image.layer.cornerRadius = 30
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()

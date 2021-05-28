@@ -10,7 +10,7 @@ import HTMLKit
 import WebKit
 // Location
 
-class TourWeatherViewController: ViewController {
+class TourWeatherViewController: UIViewController, WKNavigationDelegate {
     var weather_sido : String = ""
     var weather_sigugun: String = ""
     var weather_code : String = ""

@@ -29,18 +29,23 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     
     var nearTour_parser = XMLParser()
     var nearTour_posts = NSMutableArray()
-    
     var nearTour_elements = NSMutableDictionary()
     var nearTour_element = NSString()
-    
     var nearTour_title1 = NSMutableString()
     var nearTour_image = NSMutableString()
-    
     var nearTour_contentid = NSMutableString()
+    var nearTour_selectIndex: Int = 0
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var outlet_seartchView: UIView!
     @IBOutlet weak var outlet_searchButton: UIButton!
+    
+    @IBOutlet weak var outlet_nearButton1: UIButton!
+    @IBOutlet weak var outlet_nearButton2: UIButton!
+    @IBOutlet weak var outlet_nearButton3: UIButton!
+    @IBOutlet weak var outlet_nearButton4: UIButton!
+    @IBOutlet weak var outlet_nearButton5: UIButton!
+    
     
     @IBOutlet weak var nearView: UIView!
     @IBOutlet weak var nearStackView: UIStackView!
@@ -48,6 +53,10 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     @IBOutlet weak var recommendStackView: UIStackView!
     
     var randomsido : [String] = []
+    
+    
+    
+    // MARK: Parser
     
     private func beginParsing()
     {
@@ -65,6 +74,8 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
             nearTour_elements = [:]
             nearTour_title1 = NSMutableString()
             nearTour_title1 = ""
+            nearTour_image = NSMutableString()
+            nearTour_image = ""
             nearTour_contentid = NSMutableString()
             nearTour_contentid = ""
         }
@@ -115,6 +126,11 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         myLongitude = coor?.longitude
     }
     
+    
+    
+    
+    // MARK: Pickerview
+    
     @IBAction func doneToPickerViewController(segue:UIStoryboardSegue){
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -126,6 +142,8 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         if let v = view {
             label = v as! UILabel
         }
+        
+        label.textColor = .black
         label.font = UIFont(name: "IBMPlexSansKR-Light", size: 20)
         if component == 0 {
             label.text = result!.data[row].title
@@ -198,6 +216,12 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
                     tourlistTableViewController.motel_siguguncode_temp = sigugunCode
             }
         }
+        if segue.identifier == "segueToNearTour" {
+            if let tourInfosViewController = segue.destination as? TourInfosViewController {
+                let contentId = (nearTour_posts.object(at: nearTour_selectIndex) as AnyObject).value(forKey: "contentid") as! NSString as String
+                tourInfosViewController.contentid = contentId
+            }
+        }
     }
     
     
@@ -209,6 +233,24 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         parseJson()
         getMyLocation()
         beginParsing()
+        
+        addView(button: outlet_nearButton1,
+                imageURL: (nearTour_posts.object(at: 0) as AnyObject).value(forKey: "firstimage") as! NSString as String,
+                title: (nearTour_posts.object(at: 0) as AnyObject).value(forKey: "title") as! NSString as String)
+        addView(button: outlet_nearButton2,
+                imageURL: (nearTour_posts.object(at: 1) as AnyObject).value(forKey: "firstimage") as! NSString as String,
+                title: (nearTour_posts.object(at: 1) as AnyObject).value(forKey: "title") as! NSString as String)
+        addView(button: outlet_nearButton3,
+                imageURL: (nearTour_posts.object(at: 2) as AnyObject).value(forKey: "firstimage") as! NSString as String,
+                title: (nearTour_posts.object(at: 2) as AnyObject).value(forKey: "title") as! NSString as String)
+        addView(button: outlet_nearButton4,
+                imageURL: (nearTour_posts.object(at: 3) as AnyObject).value(forKey: "firstimage") as! NSString as String,
+                title: (nearTour_posts.object(at: 3) as AnyObject).value(forKey: "title") as! NSString as String)
+        addView(button: outlet_nearButton5,
+                imageURL: (nearTour_posts.object(at: 4) as AnyObject).value(forKey: "firstimage") as! NSString as String,
+                title: (nearTour_posts.object(at: 4) as AnyObject).value(forKey: "title") as! NSString as String)
+        
+        
    
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -239,12 +281,50 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
             tempRecommendView.layer.shadowRadius = 4
             tempRecommendView.layer.shadowOpacity = 0.2
         }
+        
+        
     }
     
     
     
     
-    //func addView(scrollView: UIScrollView, )
+    func addView(button: UIButton, imageURL: String, title: String) {
+        let label = UILabel()
+        
+        button.layer.cornerRadius = 20
+        button.setTitle("", for: .normal)
+        print(imageURL)
+        if let imageUrl = URL(string: imageURL) {
+            let data = try? Data(contentsOf: imageUrl)
+            //button.setImage(UIImage(data: data!), for: .normal)
+            button.setBackgroundImage(UIImage(data: data!), for: .normal)
+        } else {
+            // 이미지 없을때
+            let tempImage = URL(string: "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg")
+            let data = try? Data(contentsOf: tempImage!)
+            button.setBackgroundImage(UIImage(data: data!), for: .normal)
+        }
+        button.clipsToBounds = true
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 0)
+        button.layer.shadowRadius = 4
+        button.layer.shadowOpacity = 0.2
+        
+        button.addSubview(label)
+        label.text = title
+        label.textAlignment = .left
+        label.font = UIFont(name: "IBMPlexSansKR-SemiBold", size: 18)
+        label.textColor = .white
+        label.layer.shadowColor = UIColor.black.cgColor
+        label.layer.shadowOffset = CGSize(width: 0, height: 0)
+        label.layer.shadowRadius = 2
+        label.layer.shadowOpacity = 0.1
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leadingAnchor.constraint(equalTo: button.leadingAnchor, constant: 20).isActive = true
+        label.trailingAnchor.constraint(equalTo: button.trailingAnchor, constant: 0).isActive = true
+        label.bottomAnchor.constraint(equalTo: button.bottomAnchor, constant: -20).isActive = true
+        
+    }
     
     
     
@@ -319,7 +399,33 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
             sidoCode = "39"
         }
     }
+    
+    
+    
+    
+    @IBAction func action_nearButton1(_ sender: Any) {
+        nearTour_selectIndex = 0
+        performSegue(withIdentifier: "segueToNearTour", sender: nil)
+    }
+    @IBAction func action_nearButton2(_ sender: Any) {
+        nearTour_selectIndex = 1
+        performSegue(withIdentifier: "segueToNearTour", sender: nil)
+    }
+    @IBAction func action_nearButton3(_ sender: Any) {
+        nearTour_selectIndex = 2
+        performSegue(withIdentifier: "segueToNearTour", sender: nil)
+    }
+    @IBAction func action_nearButton4(_ sender: Any) {
+        nearTour_selectIndex = 3
+        performSegue(withIdentifier: "segueToNearTour", sender: nil)
+    }
+    @IBAction func action_nearButton5(_ sender: Any) {
+        nearTour_selectIndex = 4
+        performSegue(withIdentifier: "segueToNearTour", sender: nil)
+    }
 }
+
+
 
 
 
