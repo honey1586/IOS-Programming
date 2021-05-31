@@ -45,8 +45,8 @@ class NearMotelInfomationViewController: UIViewController {
         let newHeight: CGFloat = imageRatio * outlet_image.bounds.width
         imageViewHeightConstraint.constant = newHeight
         
-        //outlet_image.layer.masksToBounds = true
-        //outlet_image.layer.cornerRadius = 30
+        outlet_image.layer.masksToBounds = true
+        outlet_image.layer.cornerRadius = 30
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -58,28 +58,28 @@ class NearMotelInfomationViewController: UIViewController {
         outlet_tel.text = motel_tel
         
         nameView.layer.cornerRadius = 20
-        nameView.layer.shadowColor = UIColor.black.cgColor
-        nameView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        nameView.layer.shadowRadius = 4
-        nameView.layer.shadowOpacity = 0.10
+//        nameView.layer.shadowColor = UIColor.black.cgColor
+//        nameView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        nameView.layer.shadowRadius = 4
+//        nameView.layer.shadowOpacity = 0.10
         
         imageView.layer.cornerRadius = 20
-        imageView.layer.shadowColor = UIColor.black.cgColor
-        imageView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        imageView.layer.shadowRadius = 4
-        imageView.layer.shadowOpacity = 0.10
+//        imageView.layer.shadowColor = UIColor.black.cgColor
+//        imageView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        imageView.layer.shadowRadius = 4
+//        imageView.layer.shadowOpacity = 0.10
         
         addressView.layer.cornerRadius = 20
-        addressView.layer.shadowColor = UIColor.black.cgColor
-        addressView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        addressView.layer.shadowRadius = 4
-        addressView.layer.shadowOpacity = 0.10
+//        addressView.layer.shadowColor = UIColor.black.cgColor
+//        addressView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        addressView.layer.shadowRadius = 4
+//        addressView.layer.shadowOpacity = 0.10
         
         telView.layer.cornerRadius = 20
-        telView.layer.shadowColor = UIColor.black.cgColor
-        telView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        telView.layer.shadowRadius = 4
-        telView.layer.shadowOpacity = 0.10
+//        telView.layer.shadowColor = UIColor.black.cgColor
+//        telView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        telView.layer.shadowRadius = 4
+//        telView.layer.shadowOpacity = 0.10
         // Do any additional setup after loading the view.
     }
     

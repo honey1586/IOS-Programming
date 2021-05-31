@@ -122,7 +122,9 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     
     @IBAction func startTranscribing(_ sender: Any) {
         transcribeButton.isEnabled = false
+        transcribeButton.backgroundColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1.0)
         stopButton.isEnabled = true
+        stopButton.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
         try! startSession()
     }
     @IBAction func stopTranscribing(_ sender: Any) {
@@ -130,7 +132,9 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
             audioEngine.stop()
             speechRecognitionRequest?.endAudio()
             transcribeButton.isEnabled = true
+            transcribeButton.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
             stopButton.isEnabled = false
+            stopButton.backgroundColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1.0)
         }
         
         // 여기서 keyword로 url 제조
@@ -151,8 +155,9 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     
     @IBOutlet weak var nearView: UIView!
     @IBOutlet weak var nearStackView: UIStackView!
-    @IBOutlet weak var recommendView: UIView!
-    @IBOutlet weak var recommendStackView: UIStackView!
+    @IBOutlet weak var keywordView: UIView!
+    @IBOutlet weak var outlet_keywordSearchButton: UIButton!
+    
     
     var randomsido : [String] = []
     
@@ -351,6 +356,11 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         beginParsing()
         authorizeSR()
         
+        transcribeButton.isEnabled = true
+        transcribeButton.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+        stopButton.isEnabled = false
+        stopButton.backgroundColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1.0)
+        
         addView(button: outlet_nearButton1,
                 imageURL: (nearTour_posts.object(at: 0) as AnyObject).value(forKey: "firstimage") as! NSString as String,
                 title: (nearTour_posts.object(at: 0) as AnyObject).value(forKey: "title") as! NSString as String)
@@ -367,37 +377,38 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
                 imageURL: (nearTour_posts.object(at: 4) as AnyObject).value(forKey: "firstimage") as! NSString as String,
                 title: (nearTour_posts.object(at: 4) as AnyObject).value(forKey: "title") as! NSString as String)
         
-        
+        myTextView.backgroundColor = .white
+        myTextView.layer.cornerRadius = myTextView.bounds.height / 2.0
+        myTextView.font = UIFont(name: "IBMPlexSansKR-SemiBold", size: 20)
+        myTextView.textColor = .black
    
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         
-        if let searchButton = outlet_searchButton {
-            searchButton.layer.cornerRadius = searchButton.bounds.height / 2.0
-        }
-        if let searchView = outlet_seartchView {
-            searchView.layer.cornerRadius = 25
-            searchView.layer.shadowColor = UIColor.black.cgColor
-            searchView.layer.shadowOffset = CGSize(width: 0, height: 0)
-            searchView.layer.shadowRadius = 4
-            searchView.layer.shadowOpacity = 0.2
-        }
-        if let tempNearView = nearView {
-            tempNearView.layer.cornerRadius = 25
-            tempNearView.layer.shadowColor = UIColor.black.cgColor
-            tempNearView.layer.shadowOffset = CGSize(width: 0, height: 0)
-            tempNearView.layer.shadowRadius = 4
-            tempNearView.layer.shadowOpacity = 0.2
-        }
-        if let tempRecommendView = recommendView {
-            tempRecommendView.layer.cornerRadius = 25
-            tempRecommendView.layer.shadowColor = UIColor.black.cgColor
-            tempRecommendView.layer.shadowOffset = CGSize(width: 0, height: 0)
-            tempRecommendView.layer.shadowRadius = 4
-            tempRecommendView.layer.shadowOpacity = 0.2
-        }
+        outlet_searchButton.layer.cornerRadius = outlet_searchButton.bounds.height / 2.0
+        transcribeButton.layer.cornerRadius = transcribeButton.bounds.height / 2.0
+        stopButton.layer.cornerRadius = stopButton.bounds.height / 2.0
+        outlet_keywordSearchButton.layer.cornerRadius = outlet_keywordSearchButton.bounds.height / 2.0
+        
+        outlet_seartchView.layer.cornerRadius = 25
+//        outlet_seartchView.layer.shadowColor = UIColor.black.cgColor
+//        outlet_seartchView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        outlet_seartchView.layer.shadowRadius = 4
+//        outlet_seartchView.layer.shadowOpacity = 0.2
+        
+        nearView.layer.cornerRadius = 25
+//        nearView.layer.shadowColor = UIColor.black.cgColor
+//        nearView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        nearView.layer.shadowRadius = 4
+//        nearView.layer.shadowOpacity = 0.2
+
+        keywordView.layer.cornerRadius = 25
+//        keywordView.layer.shadowColor = UIColor.black.cgColor
+//        keywordView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        keywordView.layer.shadowRadius = 4
+//        keywordView.layer.shadowOpacity = 0.2
         
         
     }
@@ -434,8 +445,8 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         label.textColor = .white
         label.layer.shadowColor = UIColor.black.cgColor
         label.layer.shadowOffset = CGSize(width: 0, height: 0)
-        label.layer.shadowRadius = 2
-        label.layer.shadowOpacity = 0.1
+        label.layer.shadowRadius = 5
+        label.layer.shadowOpacity = 1.0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.leadingAnchor.constraint(equalTo: button.leadingAnchor, constant: 20).isActive = true
         label.trailingAnchor.constraint(equalTo: button.trailingAnchor, constant: 0).isActive = true

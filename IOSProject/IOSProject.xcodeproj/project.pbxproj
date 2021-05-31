@@ -16,6 +16,7 @@
 		3A6F6019265CDD6A00E4B493 /* IBMPlexSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6018265CDD4E00E4B493 /* IBMPlexSansKR-Light.otf */; };
 		3A6F601B265CE27500E4B493 /* TourlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F601A265CE27500E4B493 /* TourlistTableViewCell.swift */; };
 		3A6F601D265D063B00E4B493 /* IBMPlexSansKR-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F601C265D050A00E4B493 /* IBMPlexSansKR-SemiBold.otf */; };
+		3AB418F626652FFA00D9A7B1 /* MotelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB418F526652FFA00D9A7B1 /* MotelTableViewCell.swift */; };
 		3AD033A2265A4EF600F2C35D /* TourInfoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */; };
 		3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A3265A699E00F2C35D /* MapMarker.swift */; };
 		7EE7775527801DFF3175FCE6 /* Pods_IOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD92B94F65501F467C633D5 /* Pods_IOSProject.framework */; };
@@ -44,6 +45,7 @@
 		3A6F6018265CDD4E00E4B493 /* IBMPlexSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSansKR-Light.otf"; sourceTree = "<group>"; };
 		3A6F601A265CE27500E4B493 /* TourlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourlistTableViewCell.swift; sourceTree = "<group>"; };
 		3A6F601C265D050A00E4B493 /* IBMPlexSansKR-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSansKR-SemiBold.otf"; sourceTree = "<group>"; };
+		3AB418F526652FFA00D9A7B1 /* MotelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotelTableViewCell.swift; sourceTree = "<group>"; };
 		3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInfoLocation.swift; sourceTree = "<group>"; };
 		3AD033A3265A699E00F2C35D /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		58AD6528E348DFEB07530FC8 /* Pods-IOSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProject.debug.xcconfig"; path = "Target Support Files/Pods-IOSProject/Pods-IOSProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				A1179275265D731D0045DA6E /* NearMotelTableViewController.swift */,
 				A13443E4265E3F7800A454F1 /* NearMotelInfomationViewController.swift */,
 				A13443E7265E4B2300A454F1 /* MotelInfoLocation.swift */,
+				3AB418F526652FFA00D9A7B1 /* MotelTableViewCell.swift */,
 			);
 			path = IOSProject;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				A1E8C492265B668200610114 /* NearTourSearchViewController.swift in Sources */,
 				A13443E5265E3F7800A454F1 /* NearMotelInfomationViewController.swift in Sources */,
 				A1BE88D02659C47F00F28B57 /* TourInfosViewController.swift in Sources */,
+				3AB418F626652FFA00D9A7B1 /* MotelTableViewCell.swift in Sources */,
 				044DF74F26522D2B0007755D /* AppDelegate.swift in Sources */,
 				3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */,
 				A13B55DF26594DF1001E5706 /* TourlistTableViewController.swift in Sources */,

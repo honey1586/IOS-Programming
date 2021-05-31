@@ -137,13 +137,11 @@ class NearMotelTableViewController: UITableViewController ,XMLParserDelegate{
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MotelTableViewCell
         
-        cell.textLabel?.text = (motel_posts.object(at: indexPath.row) as AnyObject).value(forKey: "title") as! NSString as String
-        cell.detailTextLabel?.text = (motel_posts.object(at: indexPath.row) as AnyObject).value(forKey: "addr1") as! NSString as String
-
-        // Configure the cell...
-
+        cell.nameLabel.text = (motel_posts.object(at: indexPath.row) as AnyObject).value(forKey: "title") as! NSString as String
+        cell.addressLabel.text = (motel_posts.object(at: indexPath.row) as AnyObject).value(forKey: "addr1") as! NSString as String
+        
         return cell
     }
     

@@ -66,34 +66,34 @@ class TourInformationViewController: UIViewController {
         outlet_overview.font = UIFont(name: "IBMPlexSansKR-Light", size: 16)
         
         nameView.layer.cornerRadius = 20
-        nameView.layer.shadowColor = UIColor.black.cgColor
-        nameView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        nameView.layer.shadowRadius = 4
-        nameView.layer.shadowOpacity = 0.10
+//        nameView.layer.shadowColor = UIColor.black.cgColor
+//        nameView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        nameView.layer.shadowRadius = 4
+//        nameView.layer.shadowOpacity = 0.10
         
         imageView.layer.cornerRadius = 20
-        imageView.layer.shadowColor = UIColor.black.cgColor
-        imageView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        imageView.layer.shadowRadius = 4
-        imageView.layer.shadowOpacity = 0.10
+//        imageView.layer.shadowColor = UIColor.black.cgColor
+//        imageView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        imageView.layer.shadowRadius = 4
+//        imageView.layer.shadowOpacity = 0.10
         
         addressView.layer.cornerRadius = 20
-        addressView.layer.shadowColor = UIColor.black.cgColor
-        addressView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        addressView.layer.shadowRadius = 4
-        addressView.layer.shadowOpacity = 0.10
+//        addressView.layer.shadowColor = UIColor.black.cgColor
+//        addressView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        addressView.layer.shadowRadius = 4
+//        addressView.layer.shadowOpacity = 0.10
         
         telView.layer.cornerRadius = 20
-        telView.layer.shadowColor = UIColor.black.cgColor
-        telView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        telView.layer.shadowRadius = 4
-        telView.layer.shadowOpacity = 0.10
+//        telView.layer.shadowColor = UIColor.black.cgColor
+//        telView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        telView.layer.shadowRadius = 4
+//        telView.layer.shadowOpacity = 0.10
         
         overviewView.layer.cornerRadius = 20
-        overviewView.layer.shadowColor = UIColor.black.cgColor
-        overviewView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        overviewView.layer.shadowRadius = 4
-        overviewView.layer.shadowOpacity = 0.10
+//        overviewView.layer.shadowColor = UIColor.black.cgColor
+//        overviewView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        overviewView.layer.shadowRadius = 4
+//        overviewView.layer.shadowOpacity = 0.10
     }
     
 

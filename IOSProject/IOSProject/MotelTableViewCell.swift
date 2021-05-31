@@ -1,13 +1,14 @@
 //
-//  TourlistTableViewCell.swift
+//  MotelTableViewCell.swift
 //  IOSProject
 //
-//  Created by Jaeyeong on 2021/05/25.
+//  Created by Jaeyeong on 2021/05/31.
 //
 
 import UIKit
 
-class TourlistTableViewCell: UITableViewCell {
+class MotelTableViewCell: UITableViewCell {
+
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -37,5 +38,4 @@ class TourlistTableViewCell: UITableViewCell {
             cellView.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.0)
         }
     }
-
 }

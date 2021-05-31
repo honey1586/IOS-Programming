@@ -198,6 +198,7 @@ class TourInfosViewController: UIViewController , XMLParserDelegate {
     
     
     func customButton(button: UIButton) {
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel!.font = UIFont(name: "IBMPlexSansKR-Light.otf", size: 20.0)
         button.tintColor = .white
         button.layer.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0).cgColor
