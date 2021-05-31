@@ -182,6 +182,7 @@ class TourInfosViewController: UIViewController , XMLParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(contentid)
         beginParsing()
         // Do any additional setup after loading the view.
         

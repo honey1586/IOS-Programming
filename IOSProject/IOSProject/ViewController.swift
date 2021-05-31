@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import Speech
 
 class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewDataSource , CLLocationManagerDelegate , XMLParserDelegate{
     var result: Result?
@@ -35,6 +36,107 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     var nearTour_image = NSMutableString()
     var nearTour_contentid = NSMutableString()
     var nearTour_selectIndex: Int = 0
+    
+    var send_nearTourcontentid : String = ""
+    
+    /// 키워드 관광지 찾기 변수
+    var keywordTour_url : String = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchKeyword?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&MobileApp=AppTest&MobileOS=ETC&pageNo=1&numOfRows=10&listYN=Y&arrange=A&contentTypeId=12&keyword=강원"
+    var keyword : String = ""
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ko-KR"))!
+    private var speechRecognitionRequest: SFSpeechAudioBufferRecognitionRequest?
+    private var speechRecognitionTask: SFSpeechRecognitionTask?
+    private let audioEngine = AVAudioEngine()
+    
+    @IBOutlet weak var transcribeButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var myTextView: UITextView!
+    
+    
+    func authorizeSR() {
+        SFSpeechRecognizer.requestAuthorization { authStatus in
+            OperationQueue.main.addOperation {
+                switch authStatus {
+                case .authorized:
+                    self.transcribeButton.isEnabled = true
+                    
+                case .denied:
+                    self.transcribeButton.isEnabled = true
+                    self.transcribeButton.setTitle("Speech recognition access denied by user", for: .disabled)
+                    
+                case .restricted:
+                    self.transcribeButton.isEnabled = false
+                    self.transcribeButton.setTitle("Speech recognition restricted on device", for: .disabled)
+                    
+                case .notDetermined:
+                    self.transcribeButton.isEnabled = false
+                    self.transcribeButton.setTitle("Speech recognition not authorized", for: .disabled)
+                }
+            }
+        }
+    }
+    
+    func startSession() throws {
+        if let recognitionTask = speechRecognitionTask {
+            recognitionTask.cancel()
+            self.speechRecognitionTask = nil
+        }
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        try audioSession.setCategory(AVAudioSession.Category.record)
+        
+        speechRecognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+        
+        guard let recognitionRequest = speechRecognitionRequest else {
+            fatalError("SFSpeechAudioBufferRecognitionRequest object creation failed")
+        }
+        
+        let inputNode = audioEngine.inputNode
+        
+        recognitionRequest.shouldReportPartialResults = true
+        
+        speechRecognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) {
+            result, error in
+            var finished = false
+            
+            if let result = result {
+                self.myTextView.text = result.bestTranscription.formattedString
+                finished = result.isFinal
+            }
+            if error != nil || finished {
+                self.audioEngine.stop()
+                inputNode.removeTap(onBus: 0)
+                
+                self.speechRecognitionRequest = nil
+                self.speechRecognitionTask = nil
+                self.transcribeButton.isEnabled = true
+            }
+        }
+        
+        let recordingFormat = inputNode.outputFormat(forBus: 0)
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in self.speechRecognitionRequest?.append(buffer) }
+        
+        audioEngine.prepare()
+        try audioEngine.start()
+    }
+    
+    
+    @IBAction func startTranscribing(_ sender: Any) {
+        transcribeButton.isEnabled = false
+        stopButton.isEnabled = true
+        try! startSession()
+    }
+    @IBAction func stopTranscribing(_ sender: Any) {
+        if audioEngine.isRunning {
+            audioEngine.stop()
+            speechRecognitionRequest?.endAudio()
+            transcribeButton.isEnabled = true
+            stopButton.isEnabled = false
+        }
+        
+        // 여기서 keyword로 url 제조
+        keyword = myTextView.text
+        
+    }
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var outlet_seartchView: UIView!
@@ -220,8 +322,22 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
             if let tourInfosViewController = segue.destination as? TourInfosViewController {
                 let contentId = (nearTour_posts.object(at: nearTour_selectIndex) as AnyObject).value(forKey: "contentid") as! NSString as String
                 tourInfosViewController.contentid = contentId
+                tourInfosViewController.detailurl = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&contentId=" + contentId + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
             }
         }
+//        if segue.identifier == "segueToNearTourInfo" {
+//            if let tinfos = segue.destination as? TourInfosViewController {
+//                //sendcontentid = (posts.object(at:indexPath.row) as AnyObject).value(forKey:"contentid") as! NSString as String
+//                //print("sendContentId : " + sendcontentid)
+//                tinfos.contentid = send_nearTourcontentid
+//                tinfos.detailurl = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&contentId=" + send_nearTourcontentid + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
+//                print(send_nearTourcontentid)
+////                tinfos.weather_sido_temp2 =
+////                tinfos.weather_sigugun_temp2 = weather_sigugun_temp
+////                tinfos.motel_sidocode_temp2 = motel_sidocode_temp
+////                tinfos.motel_siguguncode_temp2 = motel_siguguncode_temp
+//            }
+//        }
     }
     
     
@@ -233,6 +349,7 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         parseJson()
         getMyLocation()
         beginParsing()
+        authorizeSR()
         
         addView(button: outlet_nearButton1,
                 imageURL: (nearTour_posts.object(at: 0) as AnyObject).value(forKey: "firstimage") as! NSString as String,
