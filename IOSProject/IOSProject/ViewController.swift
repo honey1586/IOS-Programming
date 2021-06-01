@@ -27,7 +27,9 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     var nearTour_url : String = ""
     
     var myLatitude: Double?
+    var myLatitudeF: Float?
     var myLongitude : Double?
+    var myLongitudeF: Float?
     var locationManager:CLLocationManager!
     
     var nearTour_parser = XMLParser()
@@ -232,7 +234,9 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         
         let coor = locationManager.location?.coordinate
         myLatitude = coor?.latitude
+        myLatitudeF = Float(myLatitude!)
         myLongitude = coor?.longitude
+        myLongitudeF = Float(myLongitude!)
     }
     
     
@@ -357,7 +361,9 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         parseJson()
         getMyLocation()
         
-        nearTour_url = nearTour_urlTemp + "&mapX=" + String(myLatitude!) + "&mapY=" + String(myLongitude!) + ""
+        //nearTour_url = nearTour_urlTemp + "&mapX=" + String(myLongitude!) + "&mapY=" + String(myLatitude!) + ""
+        nearTour_url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&contentTypeId=12&radius=10000&listYN=Y&mapX=" + String(myLongitude!) + "&mapY=" + String(myLatitude!)
+        print("ViewControlelr nearTour_url : \(nearTour_url)")
         
         
         beginParsing()
