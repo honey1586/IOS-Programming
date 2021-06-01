@@ -23,7 +23,9 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     
     
     /// 근처 관광지 찾기 변수
-    var nearTour_url : String = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=5&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=B&contentTypeId=12&radius=1000&listYN=Y&mapX=126.981611&mapY=37.568477"
+    var nearTour_urlTemp : String = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=5&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=B&contentTypeId=12&radius=1000&listYN=Y"
+    var nearTour_url : String = ""
+    
     var myLatitude: Double?
     var myLongitude : Double?
     var locationManager:CLLocationManager!
@@ -326,6 +328,7 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         if segue.identifier == "segueToNearTour" {
             if let tourInfosViewController = segue.destination as? TourInfosViewController {
                 let contentId = (nearTour_posts.object(at: nearTour_selectIndex) as AnyObject).value(forKey: "contentid") as! NSString as String
+                print(contentId)
                 tourInfosViewController.contentid = contentId
                 tourInfosViewController.detailurl = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&contentId=" + contentId + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
             }
@@ -353,6 +356,10 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         super.viewDidLoad()
         parseJson()
         getMyLocation()
+        
+        nearTour_url = nearTour_urlTemp + "&mapX=" + String(myLatitude!) + "&mapY=" + String(myLongitude!) + ""
+        
+        
         beginParsing()
         authorizeSR()
         

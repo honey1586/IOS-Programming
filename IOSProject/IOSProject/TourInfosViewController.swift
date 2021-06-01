@@ -20,7 +20,7 @@ class TourInfosViewController: UIViewController , XMLParserDelegate {
     var motel_sidocode_temp2 : String = ""
     var motel_siguguncode_temp2: String = ""
     
-    var contentid : String?
+    var contentid : String = ""
     var detailurl : String = ""
     
     var parser = XMLParser()
