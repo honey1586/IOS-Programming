@@ -21,7 +21,6 @@
 		3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A3265A699E00F2C35D /* MapMarker.swift */; };
 		7EE7775527801DFF3175FCE6 /* Pods_IOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD92B94F65501F467C633D5 /* Pods_IOSProject.framework */; };
 		A1179276265D731D0045DA6E /* NearMotelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1179275265D731D0045DA6E /* NearMotelTableViewController.swift */; };
-		A128EDBF2657AAA700C3B866 /* AreaCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = A128EDBE2657AAA700C3B866 /* AreaCodes.json */; };
 		A13443E5265E3F7800A454F1 /* NearMotelInfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13443E4265E3F7800A454F1 /* NearMotelInfomationViewController.swift */; };
 		A13443E8265E4B2300A454F1 /* MotelInfoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13443E7265E4B2300A454F1 /* MotelInfoLocation.swift */; };
 		A13B55D52658FEFA001E5706 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A13B55D42658FEFA001E5706 /* data.json */; };
@@ -50,7 +49,6 @@
 		3AD033A3265A699E00F2C35D /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		58AD6528E348DFEB07530FC8 /* Pods-IOSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProject.debug.xcconfig"; path = "Target Support Files/Pods-IOSProject/Pods-IOSProject.debug.xcconfig"; sourceTree = "<group>"; };
 		A1179275265D731D0045DA6E /* NearMotelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMotelTableViewController.swift; sourceTree = "<group>"; };
-		A128EDBE2657AAA700C3B866 /* AreaCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AreaCodes.json; sourceTree = "<group>"; };
 		A13443E4265E3F7800A454F1 /* NearMotelInfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMotelInfomationViewController.swift; sourceTree = "<group>"; };
 		A13443E7265E4B2300A454F1 /* MotelInfoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotelInfoLocation.swift; sourceTree = "<group>"; };
 		A13B55D42658FEFA001E5706 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				3A6F6018265CDD4E00E4B493 /* IBMPlexSansKR-Light.otf */,
 				A13B55D42658FEFA001E5706 /* data.json */,
 				044DF74E26522D2B0007755D /* AppDelegate.swift */,
-				A128EDBE2657AAA700C3B866 /* AreaCodes.json */,
 				044DF75026522D2B0007755D /* SceneDelegate.swift */,
 				044DF75426522D2B0007755D /* Main.storyboard */,
 				044DF75726522D2C0007755D /* Assets.xcassets */,
@@ -202,7 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				044DF75B26522D2C0007755D /* LaunchScreen.storyboard in Resources */,
-				A128EDBF2657AAA700C3B866 /* AreaCodes.json in Resources */,
 				3A6F601D265D063B00E4B493 /* IBMPlexSansKR-SemiBold.otf in Resources */,
 				3A6F6019265CDD6A00E4B493 /* IBMPlexSansKR-Light.otf in Resources */,
 				044DF75826522D2C0007755D /* Assets.xcassets in Resources */,

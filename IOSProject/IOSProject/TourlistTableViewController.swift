@@ -31,6 +31,11 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
     var sendcontentid : String = ""
     var sendurl = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&contentId="
     
+    var keyword_sidoCode = NSMutableString()
+    var keyword_sigunguCode = NSMutableString()
+    
+    var send_keyword_sidocode : String = ""
+    var send_keyword_sigungucode : String = ""
    
     
     private func beginParsing()
@@ -55,6 +60,10 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
             addr1 = ""
             contentid = NSMutableString()
             contentid = ""
+            keyword_sidoCode = NSMutableString()
+            keyword_sidoCode = ""
+            keyword_sigunguCode = NSMutableString()
+            keyword_sigunguCode = ""
         }
     }
     
@@ -66,7 +75,12 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
             addr1.append(string)
         } else if element.isEqual(to: "contentid") {
             contentid.append(string)
+        } else if element.isEqual(to: "areacode") {
+            keyword_sidoCode.append(string)
+        } else if element.isEqual(to: "sigungucode") {
+            keyword_sigunguCode.append(string)
         }
+        
         
     }
     
@@ -81,6 +95,12 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
             }
             if !contentid.isEqual(nil){
                 elements.setObject(contentid, forKey: "contentid" as NSCopying)
+            }
+            if !keyword_sidoCode.isEqual(nil){
+                elements.setObject(keyword_sidoCode, forKey: "areacode" as NSCopying)
+            }
+            if !keyword_sigunguCode.isEqual(nil){
+                elements.setObject(keyword_sigunguCode, forKey: "sigungucode" as NSCopying)
             }
             
             posts.add(elements)
@@ -132,6 +152,9 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         sendcontentid = (posts.object(at:indexPath.row) as AnyObject).value(forKey:"contentid") as! NSString as String
+        send_keyword_sidocode = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "areacode") as! NSString as String
+        send_keyword_sigungucode = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "sigungucode") as!
+            NSString as String
         self.performSegue(withIdentifier: "segueToInfoView", sender: nil)
         
         //print(sendcontentid)
@@ -199,6 +222,10 @@ class TourlistTableViewController: UITableViewController,XMLParserDelegate{
                 tinfos.weather_sigugun_temp2 = weather_sigugun_temp
                 tinfos.motel_sidocode_temp2 = motel_sidocode_temp
                 tinfos.motel_siguguncode_temp2 = motel_siguguncode_temp
+                tinfos.keyword_sidocode_temp = send_keyword_sidocode
+                tinfos.keyword_sigungucode_temp = send_keyword_sigungucode
+                print(send_keyword_sidocode)
+                print(send_keyword_sigungucode)
             }
         }
     }

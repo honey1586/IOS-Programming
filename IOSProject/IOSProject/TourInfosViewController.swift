@@ -20,6 +20,9 @@ class TourInfosViewController: UIViewController , XMLParserDelegate {
     var motel_sidocode_temp2 : String = ""
     var motel_siguguncode_temp2: String = ""
     
+    var keyword_sidocode_temp : String = ""
+    var keyword_sigungucode_temp : String = ""
+    
     var contentid : String = ""
     var detailurl : String = ""
     
@@ -164,14 +167,26 @@ class TourInfosViewController: UIViewController , XMLParserDelegate {
         }
         if segue.identifier == "segueToWeather" {
             if let tourweather = segue.destination as? TourWeatherViewController {
-                tourweather.weather_sido = weather_sido_temp2
-                tourweather.weather_sigugun = weather_sigugun_temp2
+                if keyword_sidocode_temp == "" {
+                    tourweather.weather_sido = weather_sido_temp2
+                    tourweather.weather_sigugun = weather_sigugun_temp2
+                } else {
+                    tourweather.weather_sido = keyword_sidocode_temp
+                    tourweather.weather_sigugun = keyword_sigungucode_temp
+                }
+                
             }
         }
         if segue.identifier == "segueToMotel" {
             if let nearMotel = segue.destination as? NearMotelTableViewController {
-                nearMotel.motel_sido_code = motel_sidocode_temp2
-                nearMotel.motel_sigugun_code = motel_siguguncode_temp2
+                if keyword_sidocode_temp == "" {
+                    nearMotel.motel_sido_code = motel_sidocode_temp2
+                    nearMotel.motel_sigugun_code = motel_siguguncode_temp2
+                } else {
+                    nearMotel.motel_sido_code = keyword_sidocode_temp
+                    nearMotel.motel_sigugun_code = keyword_sigungucode_temp
+                }
+
             }
         }
     }
@@ -182,7 +197,6 @@ class TourInfosViewController: UIViewController , XMLParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(contentid)
         beginParsing()
         // Do any additional setup after loading the view.
         

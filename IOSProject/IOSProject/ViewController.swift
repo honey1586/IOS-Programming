@@ -40,11 +40,13 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     var nearTour_image = NSMutableString()
     var nearTour_contentid = NSMutableString()
     var nearTour_selectIndex: Int = 0
+    var nearTour_sigunguCode = NSMutableString()
+    var nearTour_sidoCode = NSMutableString()
     
     var send_nearTourcontentid : String = ""
     
     /// 키워드 관광지 찾기 변수
-    var keywordTour_url : String = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchKeyword?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&MobileApp=AppTest&MobileOS=ETC&pageNo=1&numOfRows=10&listYN=Y&arrange=A&contentTypeId=12&keyword=강원"
+    var keywordTour_url : String = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchKeyword?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&MobileApp=AppTest&MobileOS=ETC&pageNo=1&numOfRows=10&listYN=Y&arrange=B&contentTypeId=12&keyword="
     var keyword : String = ""
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ko-KR"))!
     private var speechRecognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -145,6 +147,9 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         keyword = myTextView.text
         
     }
+    @IBAction func keywordSearch(_ sender: Any) {
+        performSegue(withIdentifier: "segueToKeyword", sender: nil)
+    }
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var outlet_seartchView: UIView!
@@ -189,6 +194,10 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
             nearTour_image = ""
             nearTour_contentid = NSMutableString()
             nearTour_contentid = ""
+            nearTour_sidoCode = NSMutableString()
+            nearTour_sidoCode = ""
+            nearTour_sigunguCode = NSMutableString()
+            nearTour_sigunguCode = ""
         }
     }
     func parser(_ parser: XMLParser , foundCharacters string: String)
@@ -199,6 +208,10 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
             nearTour_image.append(string)
         } else if nearTour_element.isEqual(to: "contentid") {
             nearTour_contentid.append(string)
+        } else if nearTour_element.isEqual(to: "areacode") {
+            nearTour_sidoCode.append(string)
+        } else if nearTour_element.isEqual(to: "sigungucode") {
+            nearTour_sigunguCode.append(string)
         }
         
     }
@@ -214,6 +227,12 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
             }
             if !nearTour_contentid.isEqual(nil){
                 nearTour_elements.setObject(nearTour_contentid, forKey: "contentid" as NSCopying)
+            }
+            if !nearTour_sidoCode.isEqual(nil){
+                nearTour_elements.setObject(nearTour_sidoCode, forKey: "areacode" as NSCopying)
+            }
+            if !nearTour_sigunguCode.isEqual(nil){
+                nearTour_elements.setObject(nearTour_sigunguCode, forKey: "sigungucode" as NSCopying)
             }
             
             nearTour_posts.add(nearTour_elements)
@@ -233,10 +252,12 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         locationManager.startUpdatingLocation()
         
         let coor = locationManager.location?.coordinate
-        myLatitude = coor?.latitude
-        myLatitudeF = Float(myLatitude!)
-        myLongitude = coor?.longitude
-        myLongitudeF = Float(myLongitude!)
+        //myLatitude = coor?.latitude
+        //myLatitudeF = Float(myLatitude!)
+        //myLongitude = coor?.longitude
+        //myLongitudeF = Float(myLongitude!)
+        myLatitude = 37.339569091796875
+        myLongitude = 126.7351482203925
     }
     
     
@@ -332,11 +353,29 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         if segue.identifier == "segueToNearTour" {
             if let tourInfosViewController = segue.destination as? TourInfosViewController {
                 let contentId = (nearTour_posts.object(at: nearTour_selectIndex) as AnyObject).value(forKey: "contentid") as! NSString as String
-                print(contentId)
                 tourInfosViewController.contentid = contentId
                 tourInfosViewController.detailurl = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/detailCommon?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&contentId=" + contentId + "&defaultYN=Y&firstImageYN=Y&areacodeYN=Y&catcodeYN=Y&addrinfoYN=Y&mapinfoYN=Y&overviewYN=Y"
+                let nearTour_sidoCodeTemp = (nearTour_posts.object(at: nearTour_selectIndex) as AnyObject).value(forKey: "areacode") as! NSString as String
+                let nearTour_sigunguCodeTemp = (nearTour_posts.object(at: nearTour_selectIndex) as AnyObject).value(forKey: "sigungucode") as! NSString as String
+                print(nearTour_sidoCodeTemp)
+                print(nearTour_sigunguCodeTemp)
+                tourInfosViewController.weather_sido_temp2 = nearTour_sidoCodeTemp
+                tourInfosViewController.weather_sigugun_temp2 = nearTour_sigunguCodeTemp
+                
+                tourInfosViewController.motel_sidocode_temp2 = nearTour_sidoCodeTemp
+                tourInfosViewController.motel_siguguncode_temp2 = nearTour_sigunguCodeTemp
+                
+           
             }
         }
+        
+        if segue.identifier == "segueToKeyword" {
+            if let tourlistTableViewController = segue.destination as? TourlistTableViewController {
+                var keywordurltemp = keywordTour_url + keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+                tourlistTableViewController.url = keywordurltemp
+            }
+        }
+        
 //        if segue.identifier == "segueToNearTourInfo" {
 //            if let tinfos = segue.destination as? TourInfosViewController {
 //                //sendcontentid = (posts.object(at:indexPath.row) as AnyObject).value(forKey:"contentid") as! NSString as String
@@ -363,7 +402,6 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         
         //nearTour_url = nearTour_urlTemp + "&mapX=" + String(myLongitude!) + "&mapY=" + String(myLatitude!) + ""
         nearTour_url = "http://api.visitkorea.or.kr/openapi/service/rest/KorService/locationBasedList?serviceKey=rFxQesfrwsUpDLk8%2Bxq5xlWa92la4nvY8MRzJZ8ogAmu79D5MPF%2FFyBcvJDYAggvw4%2FmDB7ZFlIg6MnWU2VCSA%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&contentTypeId=12&radius=10000&listYN=Y&mapX=" + String(myLongitude!) + "&mapY=" + String(myLatitude!)
-        print("ViewControlelr nearTour_url : \(nearTour_url)")
         
         
         beginParsing()

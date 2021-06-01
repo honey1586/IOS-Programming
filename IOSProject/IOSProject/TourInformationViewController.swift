@@ -29,7 +29,6 @@ class TourInformationViewController: UIViewController {
     var overview: String = ""
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

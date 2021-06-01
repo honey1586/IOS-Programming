@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ex-2H-22i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ex-2H-22i">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpW-qJ-fVn">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="846"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="832.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgM-Wh-t2p" userLabel="Search View">
                                                 <rect key="frame" x="10" y="10" width="370" height="326"/>
@@ -68,16 +68,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHg-ps-8Mp" userLabel="Near View">
-                                                <rect key="frame" x="10" y="346" width="370" height="210"/>
+                                                <rect key="frame" x="10" y="346" width="370" height="203.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주변 추천 관광지" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1B-1Z-Vxh">
-                                                        <rect key="frame" x="10" y="10" width="350" height="30"/>
+                                                        <rect key="frame" x="10" y="9.9999999999999982" width="350" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNX-Ux-Kbe" userLabel="near Scroll View">
-                                                        <rect key="frame" x="10" y="50" width="350" height="150"/>
+                                                        <rect key="frame" x="10" y="43.333333333333314" width="350" height="150"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bdh-k4-TSJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="1280" height="150"/>
@@ -170,16 +170,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sl0-0I-Uns" userLabel="Keyword View">
-                                                <rect key="frame" x="10" y="566" width="370" height="270"/>
+                                                <rect key="frame" x="10" y="559.33333333333337" width="370" height="263.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키워드 검색" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvf-Sl-ld6">
-                                                        <rect key="frame" x="10" y="10" width="350" height="30"/>
+                                                        <rect key="frame" x="10" y="9.9999999999999982" width="350" height="23.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kT-mt-nXg">
-                                                        <rect key="frame" x="20" y="60" width="155" height="50"/>
+                                                        <rect key="frame" x="20" y="53.333333333333258" width="155" height="50"/>
                                                         <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="y0m-8o-dgC"/>
@@ -193,7 +193,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2d-9p-gCV">
-                                                        <rect key="frame" x="195" y="60" width="155" height="50"/>
+                                                        <rect key="frame" x="195" y="53.333333333333258" width="155" height="50"/>
                                                         <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="2Zu-Xk-LOf"/>
@@ -207,7 +207,7 @@
                                                         </connections>
                                                     </button>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IMb-5S-8cs">
-                                                        <rect key="frame" x="20" y="130" width="330" height="50"/>
+                                                        <rect key="frame" x="20" y="123.33333333333326" width="330" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="kVr-FO-Q7B"/>
@@ -217,7 +217,7 @@
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBf-rA-jde">
-                                                        <rect key="frame" x="40" y="200" width="290" height="50"/>
+                                                        <rect key="frame" x="40" y="193.33333333333326" width="290" height="50"/>
                                                         <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="lsh-D1-BDW"/>
@@ -226,6 +226,9 @@
                                                         <state key="normal" title="검색">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="4C2-xP-lhe" kind="show" identifier="segueToKeyword" id="mMI-QM-ye4"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -291,7 +294,7 @@
                         <outlet property="myTextView" destination="IMb-5S-8cs" id="i8r-Iw-vdp"/>
                         <outlet property="nearStackView" destination="ica-7t-4di" id="wSX-6V-7cp"/>
                         <outlet property="nearView" destination="nHg-ps-8Mp" id="Aai-xW-CF4"/>
-                        <outlet property="outlet_keywordSearchButton" destination="sBf-rA-jde" id="qUS-dE-r9W"/>
+                        <outlet property="outlet_keywordSearchButton" destination="sBf-rA-jde" id="8QD-0w-urG"/>
                         <outlet property="outlet_nearButton1" destination="ivV-sP-dJm" id="KFt-nS-zv3"/>
                         <outlet property="outlet_nearButton2" destination="FGP-z7-03P" id="QUd-Fa-EaO"/>
                         <outlet property="outlet_nearButton3" destination="4j1-fW-1cn" id="YUQ-hJ-5Ug"/>
@@ -320,7 +323,7 @@
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="K9u-T0-xUp" customClass="TourlistTableViewCell" customModule="IOSProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="71"/>
+                                <rect key="frame" x="0.0" y="28" width="390" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K9u-T0-xUp" id="qBh-Qu-gcK">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="71"/>
@@ -432,7 +435,7 @@
                                 <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                 <state key="normal" title="관광지 위치 보기"/>
                                 <connections>
-                                    <action selector="action_showLocation:" destination="icu-vh-IxJ" eventType="touchUpInside" id="a6k-4X-kdB"/>
+                                    <action selector="action_showLocation:" destination="icu-vh-IxJ" eventType="touchUpInside" id="7eu-4p-kKy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjX-CM-hZw">
@@ -443,8 +446,7 @@
                                 <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                 <state key="normal" title="관광지 날씨 보기"/>
                                 <connections>
-                                    <action selector="action_showLocation:" destination="icu-vh-IxJ" eventType="touchUpInside" id="mx1-8L-JFE"/>
-                                    <action selector="action_showWeather:" destination="icu-vh-IxJ" eventType="touchUpInside" id="J1v-mO-zzL"/>
+                                    <action selector="action_showWeather:" destination="icu-vh-IxJ" eventType="touchUpInside" id="TNm-FI-iMX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QM-eX-654">
@@ -455,7 +457,7 @@
                                 <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                 <state key="normal" title="근처 숙박시설 검색"/>
                                 <connections>
-                                    <action selector="action_nearMotel:" destination="icu-vh-IxJ" eventType="touchUpInside" id="ddX-sI-0he"/>
+                                    <action selector="action_nearMotel:" destination="icu-vh-IxJ" eventType="touchUpInside" id="aEx-O6-qYV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -480,12 +482,12 @@
                     <connections>
                         <outlet property="outlet_nearMotel" destination="3QM-eX-654" id="coV-v3-drg"/>
                         <outlet property="outlet_showInformation" destination="al4-u8-PFy" id="TAM-CC-n5p"/>
-                        <outlet property="outlet_showLocation" destination="8kY-Vt-WqY" id="J4U-gu-sja"/>
-                        <outlet property="outlet_showWeather" destination="PjX-CM-hZw" id="PYw-iq-7AW"/>
+                        <outlet property="outlet_showLocation" destination="8kY-Vt-WqY" id="B9r-e1-SSp"/>
+                        <outlet property="outlet_showWeather" destination="PjX-CM-hZw" id="d79-Mz-hQA"/>
                         <segue destination="jBd-Ng-x9S" kind="show" identifier="segueToInformation" id="nNS-UM-28g"/>
                         <segue destination="R4h-qL-rud" kind="show" identifier="segueToLocation" id="X1S-8o-SQe"/>
-                        <segue destination="FzZ-80-Toa" kind="show" identifier="segueToWeather" id="eur-Qk-VNC"/>
                         <segue destination="Rby-Sk-PIJ" kind="show" identifier="segueToMotel" id="fuy-Pj-a3B"/>
+                        <segue destination="FzZ-80-Toa" kind="show" identifier="segueToWeather" id="syL-x0-p8N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLm-5k-XCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -567,7 +569,7 @@
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Veg-fb-KLa" customClass="MotelTableViewCell" customModule="IOSProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="71"/>
+                                <rect key="frame" x="0.0" y="28" width="390" height="71"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Veg-fb-KLa" id="iFM-Nt-V5a">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="71"/>
@@ -658,20 +660,20 @@
                                 <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3UT-lV-NHn">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="540"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="513.33333333333337"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWm-JE-OzN" userLabel="Name View">
-                                                <rect key="frame" x="20" y="20" width="350" height="90"/>
+                                                <rect key="frame" x="20" y="20" width="350" height="83.333333333333329"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb7-DJ-tZP" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-sy-UkG">
-                                                        <rect key="frame" x="20" y="50" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="43.333333333333343" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="fgn-2h-Eel"/>
@@ -693,17 +695,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4x-q5-SNV" userLabel="Image View">
-                                                <rect key="frame" x="20" y="130" width="350" height="170"/>
+                                                <rect key="frame" x="20" y="123.33333333333333" width="350" height="163.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소 사진" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKT-ht-MWC" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqo-mm-nUx">
-                                                        <rect key="frame" x="20" y="50" width="310" height="100"/>
+                                                        <rect key="frame" x="20" y="43.333333333333314" width="310" height="100"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="fRV-jA-uWJ"/>
@@ -722,17 +724,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-4t-OiF" userLabel="Address View">
-                                                <rect key="frame" x="20" y="320" width="350" height="90"/>
+                                                <rect key="frame" x="20" y="306.66666666666669" width="350" height="83.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소 주소" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvS-vL-Bkv" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amh-Q2-z51">
-                                                        <rect key="frame" x="20" y="50" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="43.333333333333314" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="tBW-PS-WbI"/>
@@ -754,17 +756,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFp-oD-5zT" userLabel="Tel View">
-                                                <rect key="frame" x="20" y="430" width="350" height="90"/>
+                                                <rect key="frame" x="20" y="410" width="350" height="83.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙박업소 전화번호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRj-Hu-p8K" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJn-2o-q8H">
-                                                        <rect key="frame" x="20" y="50" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="43.333333333333371" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="Jf5-71-CkW"/>
@@ -896,20 +898,20 @@
                                 <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCA-bA-sKL">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="653"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="619.66666666666663"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4F-IZ-1wK" userLabel="Name View">
-                                                <rect key="frame" x="20" y="20" width="350" height="90"/>
+                                                <rect key="frame" x="20" y="20" width="350" height="83.333333333333329"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mb-PJ-Nmz" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf7-Oh-pXn">
-                                                        <rect key="frame" x="20" y="50" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="43.333333333333343" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="bgz-my-3mc"/>
@@ -931,17 +933,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-Os-z40" userLabel="Image View">
-                                                <rect key="frame" x="20" y="130" width="350" height="170"/>
+                                                <rect key="frame" x="20" y="123.33333333333333" width="350" height="163.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 사진" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oy-kq-3s3" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QF7-dP-Psv">
-                                                        <rect key="frame" x="20" y="50" width="310" height="100"/>
+                                                        <rect key="frame" x="20" y="43.333333333333314" width="310" height="100"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="PGj-eu-T9I"/>
@@ -960,17 +962,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ws6-yy-3L2" userLabel="Address View">
-                                                <rect key="frame" x="20" y="320" width="350" height="90"/>
+                                                <rect key="frame" x="20" y="306.66666666666669" width="350" height="83.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 주소" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrQ-mO-5KP" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YV5-Se-aoO">
-                                                        <rect key="frame" x="20" y="50" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="43.333333333333314" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="UCg-YG-Jtc"/>
@@ -992,17 +994,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVA-II-CsA" userLabel="Tel View">
-                                                <rect key="frame" x="20" y="430" width="350" height="90"/>
+                                                <rect key="frame" x="20" y="410" width="350" height="83.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 전화번호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK1-Rd-oFl" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-yj-dQi">
-                                                        <rect key="frame" x="20" y="50" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="43.333333333333371" width="310" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="JAu-38-nly"/>
@@ -1024,17 +1026,17 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLv-xJ-orT" userLabel="Overview View">
-                                                <rect key="frame" x="20" y="540" width="350" height="93"/>
+                                                <rect key="frame" x="20" y="513.33333333333337" width="350" height="86.333333333333371"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 설명" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTc-gh-xPH" userLabel="Name">
-                                                        <rect key="frame" x="20" y="10" width="310" height="30"/>
+                                                        <rect key="frame" x="20" y="9.9999999999999982" width="310" height="23.333333333333329"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexSansKR-SemiBold" family="IBM Plex Sans KR" pointSize="20"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="CGz-Oq-ftq">
-                                                        <rect key="frame" x="20" y="50" width="310" height="33"/>
+                                                        <rect key="frame" x="20" y="43.333333333333258" width="310" height="33"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1117,6 +1119,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="dr4-VP-OKL"/>
+        <segue reference="mMI-QM-ye4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
