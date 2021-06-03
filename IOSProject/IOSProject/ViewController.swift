@@ -127,6 +127,11 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     
     
     @IBAction func startTranscribing(_ sender: Any) {
+        let explode = ExplodeView(frame: CGRect(x: (transcribeButton.imageView?.center.x)!, y: (transcribeButton.imageView?.center.y)!, width: 10, height: 10))
+        print(transcribeButton.center)
+        transcribeButton.addSubview(explode)
+        transcribeButton.sendSubviewToBack(explode)
+        
         transcribeButton.isEnabled = false
         transcribeButton.backgroundColor = UIColor(red: 0.7, green: 0.7, blue: 0.7, alpha: 1.0)
         stopButton.isEnabled = true
@@ -135,6 +140,11 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     }
     @IBAction func stopTranscribing(_ sender: Any) {
         if audioEngine.isRunning {
+            let explode = ExplodeView(frame: CGRect(x: (stopButton.imageView?.center.x)!, y: (stopButton.imageView?.center.y)!, width: 10, height: 10))
+            print(explode.center)
+            stopButton.addSubview(explode)
+            stopButton.sendSubviewToBack(explode)
+            
             audioEngine.stop()
             speechRecognitionRequest?.endAudio()
             transcribeButton.isEnabled = true
@@ -169,6 +179,10 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
     
     
     var randomsido : [String] = []
+    
+    
+    @IBAction func SearchButton(_ sender: Any) {
+    }
     
     
     
@@ -252,12 +266,12 @@ class ViewController: UIViewController , UIPickerViewDelegate , UIPickerViewData
         locationManager.startUpdatingLocation()
         
         let coor = locationManager.location?.coordinate
-        //myLatitude = coor?.latitude
-        //myLatitudeF = Float(myLatitude!)
-        //myLongitude = coor?.longitude
-        //myLongitudeF = Float(myLongitude!)
-        myLatitude = 37.339569091796875
-        myLongitude = 126.7351482203925
+        myLatitude = coor?.latitude
+        myLatitudeF = Float(myLatitude!)
+        myLongitude = coor?.longitude
+        myLongitudeF = Float(myLongitude!)
+        //myLatitude = 37.339569091796875
+        //myLongitude = 126.7351482203925
     }
     
     

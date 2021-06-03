@@ -16,6 +16,9 @@
 		3A6F6019265CDD6A00E4B493 /* IBMPlexSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F6018265CDD4E00E4B493 /* IBMPlexSansKR-Light.otf */; };
 		3A6F601B265CE27500E4B493 /* TourlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F601A265CE27500E4B493 /* TourlistTableViewCell.swift */; };
 		3A6F601D265D063B00E4B493 /* IBMPlexSansKR-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F601C265D050A00E4B493 /* IBMPlexSansKR-SemiBold.otf */; };
+		3A7F3A312668BABA0019A074 /* ExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7F3A2E2668BABA0019A074 /* ExplodeView.swift */; };
+		3A7F3A322668BABA0019A074 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7F3A2F2668BABA0019A074 /* Config.swift */; };
+		3A7F3A332668BABA0019A074 /* particle.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A7F3A302668BABA0019A074 /* particle.png */; };
 		3AB418F626652FFA00D9A7B1 /* MotelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB418F526652FFA00D9A7B1 /* MotelTableViewCell.swift */; };
 		3AD033A2265A4EF600F2C35D /* TourInfoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */; };
 		3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD033A3265A699E00F2C35D /* MapMarker.swift */; };
@@ -44,6 +47,9 @@
 		3A6F6018265CDD4E00E4B493 /* IBMPlexSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSansKR-Light.otf"; sourceTree = "<group>"; };
 		3A6F601A265CE27500E4B493 /* TourlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourlistTableViewCell.swift; sourceTree = "<group>"; };
 		3A6F601C265D050A00E4B493 /* IBMPlexSansKR-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSansKR-SemiBold.otf"; sourceTree = "<group>"; };
+		3A7F3A2E2668BABA0019A074 /* ExplodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplodeView.swift; sourceTree = "<group>"; };
+		3A7F3A2F2668BABA0019A074 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		3A7F3A302668BABA0019A074 /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle.png; sourceTree = "<group>"; };
 		3AB418F526652FFA00D9A7B1 /* MotelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotelTableViewCell.swift; sourceTree = "<group>"; };
 		3AD033A1265A4EF600F2C35D /* TourInfoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourInfoLocation.swift; sourceTree = "<group>"; };
 		3AD033A3265A699E00F2C35D /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 		044DF74D26522D2B0007755D /* IOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				3A7F3A2F2668BABA0019A074 /* Config.swift */,
+				3A7F3A2E2668BABA0019A074 /* ExplodeView.swift */,
+				3A7F3A302668BABA0019A074 /* particle.png */,
 				3A6F601C265D050A00E4B493 /* IBMPlexSansKR-SemiBold.otf */,
 				3A6F6018265CDD4E00E4B493 /* IBMPlexSansKR-Light.otf */,
 				A13B55D42658FEFA001E5706 /* data.json */,
@@ -202,6 +211,7 @@
 				3A6F601D265D063B00E4B493 /* IBMPlexSansKR-SemiBold.otf in Resources */,
 				3A6F6019265CDD6A00E4B493 /* IBMPlexSansKR-Light.otf in Resources */,
 				044DF75826522D2C0007755D /* Assets.xcassets in Resources */,
+				3A7F3A332668BABA0019A074 /* particle.png in Resources */,
 				A13B55D52658FEFA001E5706 /* data.json in Resources */,
 				044DF75626522D2B0007755D /* Main.storyboard in Resources */,
 			);
@@ -257,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A13443E8265E4B2300A454F1 /* MotelInfoLocation.swift in Sources */,
+				3A7F3A312668BABA0019A074 /* ExplodeView.swift in Sources */,
 				3AD033A2265A4EF600F2C35D /* TourInfoLocation.swift in Sources */,
 				A13B55DC26590BAA001E5706 /* AreaModels.swift in Sources */,
 				044DF75326522D2B0007755D /* ViewController.swift in Sources */,
@@ -266,6 +277,7 @@
 				3AB418F626652FFA00D9A7B1 /* MotelTableViewCell.swift in Sources */,
 				044DF74F26522D2B0007755D /* AppDelegate.swift in Sources */,
 				3AD033A4265A699E00F2C35D /* MapMarker.swift in Sources */,
+				3A7F3A322668BABA0019A074 /* Config.swift in Sources */,
 				A13B55DF26594DF1001E5706 /* TourlistTableViewController.swift in Sources */,
 				A1BE88D32659CC5300F28B57 /* TourInformationViewController.swift in Sources */,
 				044DF75126522D2B0007755D /* SceneDelegate.swift in Sources */,
@@ -429,7 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Jaeyeong.teamIOSProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,7 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Jaeyeong.teamIOSProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
